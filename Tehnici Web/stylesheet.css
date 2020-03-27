@@ -1,0 +1,88 @@
+*{font-family: "Comic Sans Ms",Comic,serif;
+	color: green;
+	outline:2px blue dashed;
+}
+h3 ~ p{
+	border-bottom: 2px dotted blue;
+	color: fuchsia;
+}
+
+h3 + p{background-image:url("http://irinaciocan.ro/tehnici_web/imagini/backgr_pas3.png");
+	background-position:fixed;
+	color:rgb(0, 95, 76);
+}
+#ex{color:orange;
+	border-top:4 px solid;
+	font-weight:bold;
+	border-bottom:4px solid;
+}
+.c1{
+	background-color: purple;
+}
+.c2{
+	font-style:italic;
+	background-color:yellow;
+	-webkit-text-decoration: line-through;
+	text-decoration: line-through;
+}
+h3.c3{background-color:#FFA500; /*observam ca o data cu asezarea clasei h3.c3 inaintea clasei .c3, h3-ul se modifica doar dupa prima regula */
+text-transform:uppercase;
+}
+
+.c3{background-color:#00FF00;
+text-transform:lowercase;
+border-top :4px solid;
+}
+p.c2,p.c3{font-style:normal;
+color:rgb(220, 20, 60);
+}
+#abc>p{
+	box-shadow:green;
+	text-shadow: red 30px 30px;
+}
+
+ol li{
+	list-style-type:lower-alpha;
+	border: rich 4px purple;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+p[title]:first-letter{
+	font-size:20px;
+}
+p[title="altceva"]:hover{
+	color:pink;
+}
+p[title="altceva"]:hover+*{ /*+ inseamna imediat de dupa*/ /*p[nth]-of-child:imi ia elementul copil de dupa paragraf,adaug(2),elem pare*/
+visibility:hidden;}
+p.nth-of-type(n+2){
+text-indent:25px;} 
+ol li:nth-child(even){
+	text-align:right;
+}
+section:first-of-type{
+	border-top:green 4px dashed;
+	border-left:green 4px dashed;
+}
+section>:first-child:after	/* >fix dupa elementul,after genereaza continut dupa*/
+{content:"primul";
+}
+h1:before,h2:before,h3:before /*trebuie pus before pentru fiecare titlu,daca insiram titlurile si punem doar un before nu e ok*/
+{content:url("http://irinaciocan.ro/imagini/foarte_zambaret.png");}
+
+p:not([class]):not([id]): /*not=sa nu aiba clasa,not ul nu merge cu virgula*/
+{cursor:crosshair;
+}
+section#abc:hover>section>p{
+letter-spacing:inherit;}
+section#abc:hover>section>p:not([title])+p /*hover=vine cu cursorul*/
+{
+	letter-spacing:15px;
+}
+
+
+
+	
+
+	
+	

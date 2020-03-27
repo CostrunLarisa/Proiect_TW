@@ -1,0 +1,16 @@
+@media screen and (min-width:1025px) and(max-width:1439px){
+	.headerul{
+		    width: 100vw;
+    margin-left: 0px;
+	}
+}
+@media screen and (max-width:768px){
+	.headerul{
+	    width: 100vw;
+    left: -30px;
+    height: 54vw;}
+	body{
+		width:92vw;
+	}
+
+}

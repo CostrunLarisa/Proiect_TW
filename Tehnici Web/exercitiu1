@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Prima pagina </title>
+	</head>
+	<body>
+		<header>
+			<h1> Titlu </h1> 			#titlu mare
+		</header>
+		<main>
+			<section>
+				<h2> Titlu sectiune </h2>
+				<p> Paragraf </p>
+				<section> 
+					<h3> Titlu subsectiune </h3>
+					<p> paragraf sectiune </p>
+				</section>				#daca ar mai fi o sectiune titlul va fi h3,deoarece e sora cu sec precedenta
+	</body>
+</html> 								#parte de inchidere '/'

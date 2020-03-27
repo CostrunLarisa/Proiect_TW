@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  counter-reset: section 3 nr_elem 0;
+}
+body *{
+	counter-increment: nr_elem;
+	}
+h1 {
+  counter-reset: subsection;
+  color:#006400;
+}
+h1::before {
+  counter-increment: section;
+  content: "Section " counter(section) ". ";
+}
+
+h2::before {
+  counter-increment: subsection 2;
+  content: counter(section) "." counter(subsection) " ";
+  color:#323CA8;
+ 
+}
+body::after{
+	content: "Nr." counter(nr_elem);
+	}
+<--!nu se poate reseta in h1,pentru ca noi nu vrem sa resetam pentru fiecare h1 counterul;daca am reseta am avea intotdeauna aceeasi valoare-->
+</style>
+</head>
+<body>
+
+
+<h1>HTML tutorials:</h1>
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+
+<h1>Scripting tutorials:</h1>
+<h2>JavaScript</h2>
+<h2>VBScript</h2>
+
+<h1>XML tutorials:</h1>
+<h2>XML</h2>
+<h2>XSL</h2>
+
+<p><b>Note:</b> IE8 supports these properties only if a !DOCTYPE is specified.</p>
+
+
+</body>
+</html>
