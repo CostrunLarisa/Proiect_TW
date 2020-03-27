@@ -1,11 +1,9 @@
-html{height:100%;}
+
 #intro{
 	position:relative;
-	margin-top:200px;
-	width:1000;
-	position:center;
+	width:80vw;
 	background-image:url("../Recipes/pasta.jpg");
-	background-repeat:no repeat;
+	background-repeat:no-repeat;
 	background-size:cover;
 	text-align:center;
 	border-bottom:5px double;
@@ -19,10 +17,9 @@ html{height:100%;}
 	margin-top:-50px;
 }
 .continut h2
-{	float:center;
+{	
 	background-color:rgb(255,255,255);
-	width:1000px;
-	left:190px;
+	width:80vw;
 	text-align:center;
 	font-size:30px;
 	opacity:0.8;
@@ -38,8 +35,8 @@ html{height:100%;}
 	box-sizing:border-box;
 	margin-top:50px;
 	font-size:20px;
-height:800px;
-width:700px;
+height:55vw;
+width:41vw;
 
 }
 #reteta1>p{
@@ -47,45 +44,21 @@ width:700px;
 }
 .subcontinut img{
 	position:relative;
-	float:right;
 	top:-820px;
-	width:700px;
-	margin-right:-150px;
+	width:50vw;
+	right:-33vw;
 	z-index:-10;
 }
-.restaurant2{
-background-image:url("../Home/restaurant2.jpg");
-background-size:cover;
-background-attachment:fixed;
-background-position:sticky;
-background-repeat:no-repeat;
-width:1460px;
-height:400px;
-position:relative;
-margin-left:-90px;
-margin-top:-100px;
-filter:blur(8px);
--webkit-filter:blur(8px);
-z-index:-100;
-
+main{
+width:100vw;}
+.container{
+	height:71vw;
+width:45vw;}
+@viewport{
+	width: 320px auto;
 }
-#contact
-{	display:block;
-	font-size:20px;
-	height:60px;
-	margin-top:40px;
-	margin-left:-30px;
-	text-align:center-left;
-	
+@-ms-viewport{
+	width:extend-to-zoom;
+	zoom: 1.0;
 }
-
-#contact p{
-	box-sizing:border-box;
-width:600px;
-height:20px;
-margin-top:-10px;
-z-index:100;
-
-}
-
 

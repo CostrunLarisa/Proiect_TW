@@ -2,13 +2,12 @@
 background-image:url("../Home/restaurant2.jpg");
 background-size:cover;
 background-attachment:fixed;
-background-position:sticky;
 background-repeat:no-repeat;
-width:1460px;
+width:100%;
 height:400px;
 position:relative;
-margin-left:-90px;
-margin-top:-100px;
+margin-left:0px;
+margin-top:0px;
 filter:blur(8px);
 -webkit-filter:blur(8px);
 }
@@ -20,10 +19,43 @@ filter:blur(8px);
 	height:60px;
 	margin-left:-30px;
 }
-
+#contact a{
+	text-decoration:none;
+	color:#000000;
+}
 #contact p{
 	box-sizing:border-box;
 width:600px;
 height:50px;
 
+}
+@viewport{
+	width: 320px auto;
+}
+@-ms-viewport{
+	width:extend-to-zoom;
+	zoom: 1.0;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+	.restaurant{
+		width:100%;
+		background-size:100% 100%;
+}}
+@media screen and (max-width:500px){
+	.restaurant2{
+		display:none;
+	}
+	#contact{
+		position:relative;
+		float:left;
+		box-sizing:border-box;
+		width:100%;
+		margin-left:-7em;
+	}
+	#contact h2,#contact p{
+		margin-top:-3em;
+	}
+	#contact p,#contact a{
+	font-size:.8em;}
 }
