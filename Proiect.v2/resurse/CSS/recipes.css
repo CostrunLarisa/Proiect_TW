@@ -1,0 +1,58 @@
+
+#intro{
+	position:relative;
+	width:65vw;
+	background-image:url("../Recipes/pasta.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	text-align:center;
+	border-bottom:0.5vw double;
+	z-index:-300;
+	display:block;
+}
+#intro h2{
+	font-size:20px;
+}
+#intro p{
+	font-size:20px;
+	text-shadow:1px 1px #000000;
+}
+
+#reteta1
+{
+	box-sizing:border-box;
+	font-size:15px;
+height:55vw;
+overflow:auto;
+width:41vw;
+margin-bottom:30px;
+
+}
+#reteta1>p{
+margin-top:-4em;
+}
+.subcontinut img{
+	position:absolute;
+	right:-0.005vw;
+	width:50vw;
+	z-index:-20;
+	float:right;
+}
+
+.container{
+	height:71vw;
+width:45vw;
+display:block;}
+@viewport{
+	width: 319px auto;
+}
+@-ms-viewport{
+	width:extend-to-zoom;
+	zoom: 1.0;
+}
+@media screen and (max-width:375px){
+	#reteta1{
+		display:block;
+
+}
+}

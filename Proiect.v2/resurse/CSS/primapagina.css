@@ -1,0 +1,659 @@
+*{
+
+	font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+	padding:.7vw;
+}
+.continut{
+	background-color:#f5f5dc;
+	height:100%;
+	margin-top:-70px;
+
+}
+.acasa{
+	width:80vw;
+}
+body{
+	background-color:#f5f5dc;
+}
+main{
+	width:90vw;
+	padding:0px;
+}
+.headerul
+{position:relative;
+	box-sizing:border-box;
+	padding:90px;
+	margin-left:-47px;
+	margin-right:-3vw;
+	margin-top:-100px;
+	background-color:#000000;
+	height:258px;
+	width:100vw;
+}
+.headerul *{
+z-index:100;}
+.imagine img{
+	width:48vw;
+	margin-left:100%;
+	float:left;
+	position:relative;
+	margin-top:-65%;
+}
+
+html{
+scroll-behavior:smooth;
+height:100%;
+}
+video{
+width:100vw;
+
+display:inline-block;
+z-index:-1000;
+}
+
+
+.video iframe,  
+.video object,  
+.video embed {
+position: relative;
+overflow: hidden;
+margin-top:-4vw;
+	background-size:cover;
+	z-index:-1000;
+
+}
+.video
+{	margin-top:-5vw;
+	background-size:cover;
+	margin-left:-57px;
+	z-index:-1000;
+	padding:0;
+}
+#subsectiune{
+width:100vw;}
+
+#subsectiune1{
+	margin-top:80px;
+	box-sizing:border-box;
+	width:35vw;
+	height:300px;
+	z-index:1000;
+}
+#subsectiune1>.subsectiune p{
+	font-size:1vw;
+	margin-top:-10%;
+	font-family:Rockwell;
+	padding-bottom:3vw;
+}
+#subsectiune1>.subsectiune h3
+{
+	border-top: 5px double ;
+	border-bottom:5px double;
+	text-align:center;
+}
+.subsectiune > h3
+{
+	font-size:3.3vw;
+	
+}
+.wanted img{
+	width:60vw;
+	left:-1%;
+	position:relative;
+	top:-50%;
+
+}
+#subsectiune4>.subsectiune>.wanted>figure figcaption{
+	width:20vw;
+	position:relative;
+	float:right;
+	left:10%;
+	margin-top:-50%;
+}
+
+#subsectiune1, #subsectiune2, #subsectiune3, #subsectiune4
+{
+	font-size:1.3vw;
+
+}
+.subacasa{
+width:90vw;}
+.welcome
+{	
+	text-align:center;
+	width:100vw;
+	height:300px;
+	font-size:50px;
+	margin-top:100px;
+	background-image:url("../Home/welcome.jpg");
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	text-shadow:1px 1px black;
+	padding:0;
+	margin-left:-70px;
+}
+body{
+	display:flex;
+	flex-wrap:wrap;
+}
+.welcome:hover
+{
+	background-color:rgba(255,255,255);
+	opacity:0.8;
+	
+}
+.program img{width:98vw;
+background-attachment:fixed;
+background-repeat:no-repeat;
+background-size:cover;
+display:block;
+padding:0;
+position:relative;
+margin-left:15px;
+}
+.program{
+	box-sizing:border-box;
+	padding:0px;
+	margin-top:200px;
+margin-left:-60px;
+position:relative;
+}
+.chef img{
+	
+	float:left;
+	margin-left:35%;
+	width:60%;
+	margin-top:-280px;
+	position:relative;
+}
+
+#subsectiune2>.subsectiune{
+	
+	top:40%;
+	  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 70%;
+  height:0;
+  transition: .5s ease;
+}
+
+#subsectiune2>.subsectiune h3
+{
+	text-align:center;
+	border-top: 5px double;
+	border-bottom:5px double;
+	margin-top:-10px;
+}
+#subsectiune2{
+	text-align:center;
+	width:50vw;
+	height:40vw;
+margin-top:10%;
+	z-index:100;
+	position:absolute;
+transition: .5s ease;
+
+}
+#subsectiune2 .subsectiune{
+	background-color:rgba(255,255,255);
+opacity:0.8;
+  left:50%;
+}
+#subsectiune2>p
+{
+	text-align:center;
+	white-space: nowrap;
+  position: absolute;
+  overflow: hidden;
+  width:50vw;
+  margin-top:-2vw;
+  transform: translate(-50%, -50%);
+ 
+	
+}
+#subsectiune2:hover .subsectiune{
+  margin-top:0px;
+  height: 35vw;
+}
+
+#subsectiune3
+{
+		margin-top:80px;
+	box-sizing:border-box;
+	width:40vw;
+	height:300px;
+	/*padding:5px;*/
+	z-index:1000;
+	
+}
+#subsectiune3>.subsectiune h3{
+	border-bottom: 5px double;
+
+}
+#subsectiune3>p{
+	position:absolute
+}
+#subsectiune4{margin-top:85px;}
+#subsectiune4 h3{
+	
+	border-top:5px double;
+	border-bottom:5px double;
+	width:37vw;
+	
+}
+
+.paste2 img{
+	 width: 45vw;
+	 position:relative;
+	 /*float:right;*/
+	 left:43%;
+	 margin-top:-13%;
+}
+
+#sectiunea2
+{	position:relative;
+	top:200px;
+	width:90vw;
+}
+#sectiunea2>.prezentare{
+		width:100%;
+		height:200px;
+		text-align:left;
+		border-top:8px double;
+		background-image:url("../Home/retete.jpg");
+		background-attachment:fixed;
+		background-size:cover;
+		border-bottom:8px double;
+		margin-top:-21vw;
+		padding:0;
+}
+
+#sectiunea2>.prezentare h2
+{position:relative;
+font-size:4vw;
+z-index:100;
+margin-left:35vw;
+}
+#sectiunea2>.retetele>figure
+{	position:relative;
+	float:right;
+	margin-top:-20px;
+}
+
+#sectiunea2>.retetele>.continut2
+{
+
+box-sizing:border-box;
+font-size:1.5vw;
+width:35vw;
+margin-top:30%;
+}
+.retetele{
+	width:40vw;
+}
+#sectiunea2>.retetele>figure figcaption
+{
+position:relative;
+font-size:12px;
+position:relative;
+left:110%;
+float:left;
+}
+#sectiunea2>.retetele button
+{position:relative;
+width:80%;
+}
+#subsectiune{
+	width:80vw;
+}
+
+#sectiunea5>h2{
+border-top: 5px double;
+width:50%;
+margin-left:170px;
+border-bottom:5px double;
+FONT-FAMILY:New Century Schoolbook, TeX Gyre Schola, serif;}
+
+
+/*.tabla{
+
+background-size:cover;
+background-repeat:no-repeat;
+filter:blur(2px);
+-webkit-filter:blur(2px);
+width:600px;
+height:400px;
+  margin-top: -40px;
+  font-size: 20px;
+  text-align: center;
+ transition: .3s ease;
+ position:relative;
+ margin-left:0px;
+}*/
+
+.tabla:hover,#sectiune5 h2:hover{
+width:700px;
+height:500px;
+font-size:20px;
+filter:blur(0px);
+-webkit-filter:blur(0px);
+text-align:center;
+ position:relative;
+}
+
+
+.grid-container{
+	display:grid;
+	margin-top:500px;
+	width:50vw;
+	justify-content:space-evenly;
+	grid-column-gap:5px;
+	grid-row-gap:250px;
+	grid-template-columns: auto auto ;
+	margin-left:20vw;
+	
+}
+.grid_content
+{
+	 
+	width:40vw;
+	height:500px;
+  font-size: 1.5vw;
+  text-align: center;
+  position:relative;
+ margin-left:-5%;
+
+}
+
+.galerie,.meniu,.order,.tabla{
+background-size:cover;
+background-repeat:no-repeat;
+filter:blur(2px);
+-webkit-filter:blur(2px);
+width:30vw;
+height:400px;
+  margin-top: -40px;
+  font-size: 1.5vw;
+  text-align: center;
+ transition: .3s ease;
+ position:relative;
+ margin-left:0px;
+}
+.galerie:hover,.meniu:hover,.order:hover{
+	
+width:45vw;
+height:500px;
+font-size:20px;
+filter:blur(0px);
+-webkit-filter:blur(0px);
+text-align:center;
+ position:relative;
+}
+
+#sectiuneaspec>a
+{text-decoration:none;
+}
+#sectiuneaspec .grid_content,#sectiunea4 .grid_content{
+	z-index:1;
+	position:absolute; 
+}
+
+#sectiunea5 .grid_content{
+	z-index:1;
+position:absolute;}
+#sectiunea3 .grid_content{	
+z-index:1; 
+position:absolute;}
+
+#subsectiune2>.subsectiune a{
+	
+	text-align:center;
+	text-decoration:none;
+	list-style:none;
+	cursor:pointer;
+	border:none;
+	font-size:1.5vw;
+	color:#000000;
+	text-shadow:1px 1px solid;
+}
+.button5,.button2,.button3,.button4{
+	width:18vw;
+		background: rgba(255,255,255);
+	opacity:0.8;
+	text-align:center;
+	text-decoration:none;
+	list-style:none;
+	cursor:pointer;
+	border:none;
+	font-size:1.5vw;
+	padding-bottom:5%;
+	color:#000000;
+}
+.texte{
+	text-decoration:none;
+	color:#000000;
+}
+#sectiunea4>.order-container>p
+{	
+	margin-top:-200px;
+}
+
+
+
+.restaurant2{
+background-image:url("../Home/restaurant2.jpg");
+background-size:cover;
+background-attachment:fixed;
+background-repeat:no-repeat;
+width:80vw;
+height:400px;
+position:relative;
+margin-top:0px;
+filter:blur(8px);
+-webkit-filter:blur(8px);
+}
+#contact
+{	display:block;
+	position:absolute;
+	z-index:1;
+	font-size:18px;
+	height:60px;
+	width:50%;
+}
+#contact a{
+	text-decoration:none;
+	color:#000000;
+}
+#contact p{
+	box-sizing:border-box;
+width:200px;
+height:50px;
+padding:0px;
+
+}
+@viewport{
+	width: 320px auto;
+}
+@-ms-viewport{
+	width:extend-to-zoom;
+	zoom: 1.0;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+	.restaurant{
+		width:80%;
+		background-size:100% 100%;
+}}
+
+
+@media screen and (max-width:600px){
+	.restaurant2{
+		display:none;
+	}
+	#contact{
+		position:relative;
+		float:left;
+		box-sizing:border-box;
+		width:100%;
+		
+	}
+	#contact p,#contact a{
+	font-size:.8em;}
+}
+/*@media (min-width: 1024px) and (max-width: 1280px) {
+body{
+width:1280px;}
+header{
+	width:1280px;
+}
+
+#subsectiune2{
+	width:90vw;
+}
+#sectiunea2,#subsectiune2{
+	width:1280px;
+}
+main{
+width:100vw;}
+#subsectiune2>.subsectiune{
+	width:600px;
+}
+
+p{font-size:20px;}
+}
+
+
+/*@media screen and (max-width:375px){
+	#sectiunea2>.prezentare{
+	width:90%;
+	margin-left:0%;
+	}
+	.program img{
+		width:1300px;
+	margin-left:30px;
+	}
+	.chef img{
+		width:150vw;
+	}
+	header{
+		width:300vw;
+		margin-left:68px;
+	}
+	.acasa{
+		
+		width:325vw;
+	}
+	#subsectiune2:hover .subsectiune{
+		height:500px;
+		width:600px;
+	}
+	#subsectiune2:hover p{
+		width:500px;
+		line-height:20px;
+		height:20px;
+		margin-top:-20px;
+	}
+	
+	.video{
+	width:1430px;
+	margin-left:-177px;}
+	.grid_content{
+		width:190px;
+	}
+	.galerie,.order,.meniu,.tabla{
+		width:290px;
+	}
+	.paste2 img{
+		width:670px;
+	}
+}
+	@media screen and (max-width:320px){
+		.video{
+	width:384vw;
+	margin-left:-180px;}
+	header{
+		width:285vw;
+		margin-left:78px;
+	}
+	.galerie,.order,.meniu,.tabla{
+		width:270px;
+	}
+	main{
+		width:1000px;
+	}
+		#subsectiune2:hover .subsectiune{
+		height:400px;
+		width:550px;
+	}
+	#subsectiune2:hover p{
+		width:500px;
+		line-height:15px;
+		height:10px;
+		margin-top:-40px;
+		font-size:15px;
+	}
+	.paste2 img{
+		width:470px;
+		position:relative;
+		left:50px;
+	}
+	
+	.program img{
+		width:1100px;
+	margin-left:50px;
+	}
+	#subsectiune2>.subsectiune{
+		margin-top:-130px;
+	}
+	#sectiunea2>.prezentare>.retetele>.continut{
+		width:300px;
+		margin-left:-50px;
+	}
+	#sectiunea2>.retetele .button1{
+		top:0px;
+	}
+	.imagine img{
+		width:400px;
+		margin-left:-50px;
+	}
+	.grid_content{
+		width:160px;
+		height:100px;
+	}
+	.button4,.button5{
+		height:100px;
+		width:200px;
+		font-size:12px;
+	}
+
+	}
+@media screen and (min-width:1540px)and (max-width:2800px){
+	main,.program img{
+		width:100vw;
+	}
+	header{
+		width:100vw;
+		margin-left:0px;
+	}
+	.program img{
+		margin-left:50px;
+	}
+	.video{
+		margin-left:-177px;
+		width:109.3vw;
+	}
+	#sectiunea2>.retetele>.continut{
+		width:700px;
+	}
+	#sectiunea2>.retetele .button1{
+		top:50px;
+	}
+	#sectiunea2>.prezentare{
+	margin-left:0px;
+	width:100vw;
+	}
+}*/

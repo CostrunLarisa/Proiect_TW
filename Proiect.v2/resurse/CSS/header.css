@@ -1,0 +1,173 @@
+
+*{
+
+	font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+	padding:30px;
+	
+}
+
+
+.headerul
+{position:relative;
+	box-sizing:border-box;
+	padding:90px;
+	margin-top:-132px;
+	margin-left:-115px;
+	background-color:#000000;
+	height:230px;
+	width:100vw;
+}
+
+main{
+width:100vw;}
+html{height:100%;}
+
+.subtitlu{
+  font-size:12px;
+  margin-top:-85px;
+
+}
+.imagine{
+	width:200px;
+	height: 40%;
+	
+}
+
+.sectiune{
+	
+	margin-top:-156px;
+	font-family:Hancock;
+	font-style:italic;
+	text-align:center;
+	font-size:20px;
+	color: #fff;
+	padding:15px;
+	width:100%;
+	height:50px;
+
+
+}
+
+nav {	display:inline-flex;
+		flex-wrap:wrap;
+		line-height:20px;
+		height:10px;
+		top:20px;
+	}
+	
+ul.menu{
+		margin-top:28px;
+		
+	}
+	ul.menu>li{
+		margin-top:10px;
+		display:block;
+		color:white;
+		font-size:16px;
+		height:1.2rem;
+		line-height:1.2rem;
+		text-align:center;					
+		list-style-type:none;
+		overflow:hidden;	
+		z-index:1;	
+		padding-bottom:10px;
+		}
+
+	ul.menu>li{
+	 float:left;		
+	 width:7vw;
+	}
+	ul.menu>li>ul.submenu>li{
+		display:block;
+		font-size:16px;
+		list-style-type:none;
+	width:100%;
+	 color:#000000;
+	 text-decoration:none;
+	 height:2rem;
+	 line-height:2rem;
+	 z-index:1000;
+	 	padding:0px;
+	}
+	ul.menu>li>ul.submenu>li a:last-child{
+		border-bottom:1px solid;
+	}
+	ul.submenu>li>a{
+	display:block;
+	height:1.95rem;
+	line-height:1rem;
+	 text-decoration:none;
+	 color:#000000;
+	 width:100%;
+	text-align:center;
+	z-index:1000;
+	padding:0px;
+	}
+	
+	ul.menu>li>a{
+		display:block;
+		height:	100%;
+		width:100%;
+		text-decoration:none;
+		z-index:1;
+		border-radius:30px;
+		padding:12px;
+		transition:background-color 1s;
+	}
+	ul.submenu{
+	background-color:rgb(128, 128, 128);
+	opacity:0.8;
+	width:110%;
+	z-index:100;
+	padding:0;
+	margin-top:0;
+	}
+
+
+	ul.menu>li>a{
+		color:white;
+	}
+
+		ul.menu>li:hover{
+		overflow:visible;
+		z-index:1;
+	}
+	
+	ul.menu>li>a:hover
+	{
+		background-color: rgb(128, 128, 128);
+		opacity:0.8;
+		z-index:1;
+	}
+	ul.submenu>li>a:hover{
+		background-color: rgb(255, 255, 255);
+	}
+@viewport{
+	width: 319px auto;
+}
+@-ms-viewport{
+	width:extend-to-zoom;
+	zoom: 1.0;
+}
+@media screen and (min-width:320px) and (max-width:680px){
+.headerul{
+	height:651px;}
+}
+
+@media screen and (min-width:842px) and (max-width:1316px){
+	.headerul{
+
+	height:300px;
+}
+}
+@media screen and (min-width:680px) and (max-width:842px){
+.headerul{
+height:386px;
+margin-left:-115px;}
+}
+
+@media screen and (min-width:375px) and (max-width:425px){
+.headerul{
+	height:80vw;
+	}
+}
