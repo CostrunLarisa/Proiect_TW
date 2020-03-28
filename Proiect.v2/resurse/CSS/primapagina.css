@@ -226,7 +226,6 @@ opacity:0.8;
 	box-sizing:border-box;
 	width:40vw;
 	height:300px;
-	/*padding:5px;*/
 	z-index:1000;
 	
 }
@@ -249,7 +248,6 @@ opacity:0.8;
 .paste2 img{
 	 width: 45vw;
 	 position:relative;
-	 /*float:right;*/
 	 left:43%;
 	 margin-top:-13%;
 }
@@ -319,22 +317,6 @@ border-bottom:5px double;
 FONT-FAMILY:New Century Schoolbook, TeX Gyre Schola, serif;}
 
 
-/*.tabla{
-
-background-size:cover;
-background-repeat:no-repeat;
-filter:blur(2px);
--webkit-filter:blur(2px);
-width:600px;
-height:400px;
-  margin-top: -40px;
-  font-size: 20px;
-  text-align: center;
- transition: .3s ease;
- position:relative;
- margin-left:0px;
-}*/
-
 .tabla:hover,#sectiune5 h2:hover{
 width:700px;
 height:500px;
@@ -359,13 +341,13 @@ text-align:center;
 }
 .grid_content
 {
-	 
+	
 	width:40vw;
 	height:500px;
   font-size: 1.5vw;
   text-align: center;
   position:relative;
- margin-left:-5%;
+ margin-left:5%;
 
 }
 
@@ -374,7 +356,7 @@ background-size:cover;
 background-repeat:no-repeat;
 filter:blur(2px);
 -webkit-filter:blur(2px);
-width:30vw;
+width:35vw;
 height:400px;
   margin-top: -40px;
   font-size: 1.5vw;
@@ -383,10 +365,10 @@ height:400px;
  position:relative;
  margin-left:0px;
 }
-.galerie:hover,.meniu:hover,.order:hover{
+.galerie:hover,.meniu:hover,.order:hover,.tabla:hover{
 	
-width:45vw;
-height:500px;
+width:38vw;
+height:450px;
 font-size:20px;
 filter:blur(0px);
 -webkit-filter:blur(0px);
@@ -397,17 +379,29 @@ text-align:center;
 #sectiuneaspec>a
 {text-decoration:none;
 }
-#sectiuneaspec .grid_content,#sectiunea4 .grid_content{
+#sectiuneaspec>.grid_content,#sectiunea4>.grid_content{
 	z-index:1;
 	position:absolute; 
+	background: rgba(255,255,255);
+	opacity:0.8;
+	width:20vw;
+	height:32%;
 }
 
-#sectiunea5 .grid_content{
+#sectiunea5>.grid_content{
 	z-index:1;
-position:absolute;}
-#sectiunea3 .grid_content{	
-z-index:1; 
-position:absolute;}
+	width:20vw;
+position:absolute;
+background: rgba(255,255,255);
+	opacity:0.8;
+		height:32%;}
+#sectiunea3>.grid_content{	
+z-index:1;
+width:20vw; 
+position:absolute;
+background: rgba(255,255,255);
+	opacity:0.8;
+		height:32%;}
 
 #subsectiune2>.subsectiune a{
 	
@@ -420,10 +414,19 @@ position:absolute;}
 	color:#000000;
 	text-shadow:1px 1px solid;
 }
+.button1{
+		width:18vw;
+	text-align:center;
+	text-decoration:none;
+	list-style:none;
+	cursor:pointer;
+	border:none;
+	font-size:1.5vw;
+	padding-bottom:5%;
+	color:#000000;
+}
 .button5,.button2,.button3,.button4{
 	width:18vw;
-		background: rgba(255,255,255);
-	opacity:0.8;
 	text-align:center;
 	text-decoration:none;
 	list-style:none;
@@ -504,156 +507,3 @@ padding:0px;
 	#contact p,#contact a{
 	font-size:.8em;}
 }
-/*@media (min-width: 1024px) and (max-width: 1280px) {
-body{
-width:1280px;}
-header{
-	width:1280px;
-}
-
-#subsectiune2{
-	width:90vw;
-}
-#sectiunea2,#subsectiune2{
-	width:1280px;
-}
-main{
-width:100vw;}
-#subsectiune2>.subsectiune{
-	width:600px;
-}
-
-p{font-size:20px;}
-}
-
-
-/*@media screen and (max-width:375px){
-	#sectiunea2>.prezentare{
-	width:90%;
-	margin-left:0%;
-	}
-	.program img{
-		width:1300px;
-	margin-left:30px;
-	}
-	.chef img{
-		width:150vw;
-	}
-	header{
-		width:300vw;
-		margin-left:68px;
-	}
-	.acasa{
-		
-		width:325vw;
-	}
-	#subsectiune2:hover .subsectiune{
-		height:500px;
-		width:600px;
-	}
-	#subsectiune2:hover p{
-		width:500px;
-		line-height:20px;
-		height:20px;
-		margin-top:-20px;
-	}
-	
-	.video{
-	width:1430px;
-	margin-left:-177px;}
-	.grid_content{
-		width:190px;
-	}
-	.galerie,.order,.meniu,.tabla{
-		width:290px;
-	}
-	.paste2 img{
-		width:670px;
-	}
-}
-	@media screen and (max-width:320px){
-		.video{
-	width:384vw;
-	margin-left:-180px;}
-	header{
-		width:285vw;
-		margin-left:78px;
-	}
-	.galerie,.order,.meniu,.tabla{
-		width:270px;
-	}
-	main{
-		width:1000px;
-	}
-		#subsectiune2:hover .subsectiune{
-		height:400px;
-		width:550px;
-	}
-	#subsectiune2:hover p{
-		width:500px;
-		line-height:15px;
-		height:10px;
-		margin-top:-40px;
-		font-size:15px;
-	}
-	.paste2 img{
-		width:470px;
-		position:relative;
-		left:50px;
-	}
-	
-	.program img{
-		width:1100px;
-	margin-left:50px;
-	}
-	#subsectiune2>.subsectiune{
-		margin-top:-130px;
-	}
-	#sectiunea2>.prezentare>.retetele>.continut{
-		width:300px;
-		margin-left:-50px;
-	}
-	#sectiunea2>.retetele .button1{
-		top:0px;
-	}
-	.imagine img{
-		width:400px;
-		margin-left:-50px;
-	}
-	.grid_content{
-		width:160px;
-		height:100px;
-	}
-	.button4,.button5{
-		height:100px;
-		width:200px;
-		font-size:12px;
-	}
-
-	}
-@media screen and (min-width:1540px)and (max-width:2800px){
-	main,.program img{
-		width:100vw;
-	}
-	header{
-		width:100vw;
-		margin-left:0px;
-	}
-	.program img{
-		margin-left:50px;
-	}
-	.video{
-		margin-left:-177px;
-		width:109.3vw;
-	}
-	#sectiunea2>.retetele>.continut{
-		width:700px;
-	}
-	#sectiunea2>.retetele .button1{
-		top:50px;
-	}
-	#sectiunea2>.prezentare{
-	margin-left:0px;
-	width:100vw;
-	}
-}*/
