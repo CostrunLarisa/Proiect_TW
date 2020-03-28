@@ -40,32 +40,3 @@ width:70vw;
 	width:extend-to-zoom;
 	zoom: 1.0;
 }
-/*@media screen and (min-width:769px) and (max-width:1024px){
-	.headerul{
-	width:100vw;
-	height:30vw;
-	margin-left:0vw;}
-	
-}
-@media screen and (min-width:425px) and (max-width:582px){
-.headerul{
-	height:60vw;}
-}
-@media screen and (min-width:769px) and (max-width:986px){
-.headerul{
-	width:100vw;
-	margin-left:-117px;
-}
-.headerul{
-	width:100vw;}
-}
-@media screen and (max-width:425px){
-.headerul{
-	height:80vw;}
-}
-@media screen and (max-width:375px){
-.headerul{
-height: 90vw;
-    width: 100vw;
- margin-left: -20px;}
-}*/
