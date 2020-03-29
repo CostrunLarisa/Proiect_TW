@@ -412,7 +412,7 @@ background: rgba(255,255,255);
 	border:none;
 	font-size:1.5vw;
 	color:#000000;
-	text-shadow:1px 1px solid;
+	text-shadow:1px 1px;
 }
 .button1{
 		width:18vw;
