@@ -1,0 +1,173 @@
+body{
+background-color:#F5F5DC;}
+#continut{
+	padding:0px;
+}
+#continut>h1{
+	font-size:3vw;
+	text-align:center;
+	border-bottom:3px solid black;
+}
+#sectiunea5>h2{
+border-top: 5px double;
+width:50%;
+margin-left:170px;
+border-bottom:5px double;
+FONT-FAMILY:New Century Schoolbook, TeX Gyre Schola, serif;}
+
+
+#sectiunea4,#sectiunea5,#sectiunea3,#sectiuneaspec{
+padding:0px;}
+
+.grid-container-intro{
+	display:grid;
+	width:50vw;
+	justify-content:flex-start;
+	grid-template-columns: auto auto;	
+}
+.grid_contentIntro
+{
+  font-size: 1.5vw;
+  text-align: center;
+ 	z-index:1;
+	position:absolute; 
+	background: rgba(255,255,255);
+	opacity:0.8;
+	border-radius:100%;
+	margin-top:5vw;
+	margin-left:1%;
+	transition:background-color 1s;
+	height:4vw;
+	width:20vw;
+}
+
+.grid_contentIntro:hover{
+	background: rgba(255,255,255);
+	opacity:1;
+}
+.grid_contentIntro>.texte h2{
+margin-top:-4vw;}
+.galerie1,.meniu1,.order1,.tabla1{
+background-size:cover;
+background-repeat:no-repeat;
+width:40vw;
+  margin-top: -40px;
+  font-size: 1.5vw;
+  text-align: center;
+ transition: .3s ease;
+ position:relative;
+ padding:0px;
+
+}
+.galerie1:hover,.meniu1:hover,.order1:hover,.tabla1:hover{
+font-size:20px;
+text-align:center;
+ position:relative;
+	
+}
+
+#sectiuneaIntro4,#sectiuneaIntro5,#sectiuneaIntro3,#sectiuneaIntrospec{
+padding:0px;}
+
+.grid-container{
+	display:grid;
+	width:50vw;
+	justify-content:flex-start;
+	grid-template-columns: auto auto auto;	
+}
+.grid_content
+{
+	width:40vw;
+	height:500px;
+  font-size: 1.5vw;
+  text-align: center;
+  position:relative;
+}
+
+.galerie,.meniu,.order,.tabla{
+background-size:cover;
+background-repeat:no-repeat;
+width:28vw;
+/*height:400px;*/
+  margin-top: -40px;
+  font-size: 1.5vw;
+  text-align: center;
+ transition: .3s ease;
+ position:relative;
+ margin-left:-55px;
+}
+.galerie:hover,.meniu:hover,.order:hover,.tabla:hover{
+	
+width:33vw;
+/*height:450px;*/
+font-size:20px;
+text-align:center;
+ position:relative;
+	
+}
+
+#sectiuneaspec>a
+{text-decoration:none;
+}
+#sectiuneaspec>.grid_content,#sectiunea4>.grid_content{
+	z-index:1;
+	position:absolute; 
+	background: rgba(255,255,255);
+	opacity:0.8;
+	width:20vw;
+	height:32%;
+}
+
+#sectiunea5>.grid_content{
+	z-index:1;
+	width:20vw;
+position:absolute;
+background: rgba(255,255,255);
+	opacity:0.8;
+		height:32%;}
+#sectiunea3>.grid_content{	
+z-index:1;
+width:20vw; 
+position:absolute;
+background: rgba(255,255,255);
+	opacity:0.8;
+		height:32%;}
+
+}
+.button1{
+		width:18vw;
+	text-align:center;
+	text-decoration:none;
+	list-style:none;
+	cursor:pointer;
+	border:none;
+	font-size:1.5vw;
+	padding-bottom:5%;
+	color:#000000;
+}
+.button5,.button2,.button3,.button4{
+	width:18vw;
+	text-align:center;
+	text-decoration:none;
+	list-style:none;
+	cursor:pointer;
+	border:none;
+	font-size:1.5vw;
+	padding-bottom:5%;
+	color:#000000;
+}
+.texte{
+	text-decoration:none;
+	color:#000000;
+}
+#sectiunea4>.order-container>p
+{	
+	margin-top:-200px;
+}
+@viewport{
+	width: 320px auto;
+}
+@-ms-viewport{
+	width:extend-to-zoom;
+	zoom: 1.0;
+}

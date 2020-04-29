@@ -35,7 +35,7 @@ html{height:100%;}
 
 .sectiune{
 	
-	margin-top:-156px;
+	margin-top:-140px;
 	font-family:Hancock;
 	font-style:italic;
 	text-align:center;
@@ -53,40 +53,39 @@ nav {	display:inline-flex;
 		line-height:20px;
 		height:10px;
 		top:20px;
+		
 	}
 	
 ul.menu{
-		margin-top:28px;
+		margin-top:20px;
 		
 	}
 	ul.menu>li{
-		margin-top:10px;
+		margin-top:5px;
 		display:block;
 		color:white;
 		font-size:16px;
-		height:1.2rem;
-		line-height:1.2rem;
+		height:1rem;
+		line-height:1.8rem;
 		text-align:center;					
 		list-style-type:none;
 		overflow:hidden;	
 		z-index:1;	
-		padding-bottom:10px;
 		}
 
 	ul.menu>li{
 	 float:left;		
-	 width:7vw;
+
 	}
 	ul.menu>li>ul.submenu>li{
 		display:block;
-		font-size:16px;
 		list-style-type:none;
-	width:100%;
-	 color:#000000;
-	 text-decoration:none;
-	 height:2rem;
-	 line-height:2rem;
-	 z-index:1000;
+		width:100%;
+		color:#000000;
+		text-decoration:none;
+		height:2rem;
+		line-height:2rem;
+		z-index:1000;
 	 	padding:0px;
 	}
 	ul.menu>li>ul.submenu>li a:last-child{
@@ -102,12 +101,13 @@ ul.menu{
 	text-align:center;
 	z-index:1000;
 	padding:0px;
+	font-size:1.1rem;
 	}
 	
 	ul.menu>li>a{
 		display:block;
-		height:	100%;
-		width:100%;
+		width:100%;	
+		font-size:1.1rem;
 		text-decoration:none;
 		z-index:1;
 		border-radius:30px;
@@ -116,11 +116,10 @@ ul.menu{
 	}
 	ul.submenu{
 	background-color:rgb(128, 128, 128);
-	opacity:0.8;
 	width:110%;
 	z-index:100;
 	padding:0;
-	margin-top:0;
+
 	}
 
 
@@ -130,17 +129,16 @@ ul.menu{
 
 		ul.menu>li:hover{
 		overflow:visible;
-		z-index:1;
 	}
 	
 	ul.menu>li>a:hover
 	{
 		background-color: rgb(128, 128, 128);
-		opacity:0.8;
-		z-index:1;
+		z-index:-1000;
 	}
 	ul.submenu>li>a:hover{
 		background-color: rgb(255, 255, 255);
+		z-index:1000;
 	}
 @viewport{
 	width: 319px auto;
