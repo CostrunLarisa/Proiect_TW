@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="resurse/CSS/header.css">
 		<link rel="stylesheet" type="text/css" href="resurse/CSS/order.css">
 		<link rel="stylesheet" type="text/css" href="resurse/CSS/footer.css">
+		<script src="resurse/Javascript/order.js"></script>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,6 @@
 		<meta name="description" content="Comenzi online cu livrare la domiciliu">
 		<meta name="keywords" content="comenzi,online,livrare">
 		<link rel="shortcut icon" type="image/x-icon" href="resurse/Imagini/./favicon.ico"/>
-		<link rel="stylesheet" type="text/css" href="theme.css">
 		<style>
 		html{
 		scroll-behavior:smooth;
@@ -44,8 +44,10 @@
 											<li><a href="gallery.html">Gallery</a></li>
 											<li><a href="order.html"> Order online </a></li>
 											<li><a href="book.html"> Book a table </a></li>
-										
-
+											<li class="cos">
+												<a href="cos.html"><span>0</span><img class="shop" src="resurse/Imagini/shopping-cart-32.ico"></img>
+												</a>
+											</li>
 								</ul>
 							</nav>
 					</header>
@@ -56,100 +58,127 @@
 	<div class="grid-container-intro">
 						<section id="sectiuneaIntro3">
 							<div class="grid_contentIntro">
-								<a href="menu.html" class="texte"><h2>PASTA </h2></a>
+								<a href="#meniu_pasta" class="texte"><h2>PASTA </h2></a>
 							</div>
 						<img alt="Meniu" class="meniu1" src="resurse/Imagini/order4.jpeg"/>
 						</section>
 						<section id="sectiuneaIntrospec">
 							<div class="grid_contentIntro">
-								<a href="menu.html" class="texte"><h2>PIZZA</h2></a>
+								<a href="#meniu_pizza" class="texte"><h2>PIZZA</h2></a>
 							</div>
 							<img alt="Masa" class="galerie1" src="resurse/Imagini/order23.jpg"/>
 						</section>
 						<section id="sectiuneaIntro4">
 							<div class="grid_contentIntro">
-								<a href="order.html" class="texte"><h2>SALADS</h2></a>
+								<a href="#meniu_salads" class="texte"><h2>SALADS</h2></a>
 							</div>
 							<img alt="Chelner" class="order1" src="resurse/Imagini/order3.png"/>
 						</section>
 						<section id="sectiuneaIntro5">
 							<div class="grid_contentIntro">
-								<a href="book.html" class="texte"><h2>SPECIALITIES</h2></a>
+								<a href="#meniu_spec" class="texte"><h2>SPECIALITIES</h2></a>
 							</div>
 							<img alt="Table" class="tabla1" src="resurse/Imagini/order104.jpg"/>
 						</section>
 						<section id="sectiuneaIntro3">
 							<div class="grid_contentIntro">
-								<a href="menu.html" class="texte"><h2>DESSERTS</h2></a>
+								<a href="#meniu_dessert" class="texte"><h2>DESSERTS</h2></a>
 							</div>
 							<img alt="Meniu" class="meniu1" src="resurse/Imagini/order49.jpg"/>
 						</section>
 						<section id="sectiuneaIntro3">
 							<div class="grid_contentIntro">
-								<a href="menu.html" class="texte"><h2>SUPE</h2></a>
+								<a href="#meniu_soups" class="texte"><h2>SOUPS</h2></a>
 							</div>
 							<img alt="Meniu" class="meniu1" src="resurse/Imagini/order113.jpg"/>
 						</section>
 	</div>
-
+	<section id="meniu_pasta"
 				<div class="grid-container">
 						<section id="sectiunea3">
 							<div class="grid_content">
-								<a href="menu.html" class="texte"><h2>MENU </h2></a>
-									<a rel="stylesheet" type="text/css" href="menu.html" class="button button2">Meniul care te va transpune in inima Italiei.</a>
+								<h2>PASTA BOLOGNESE </h2>
+								<p>Contine:carne de vita,paste,sos de rosii,parmezan,condimente,ceapa,oregano</p><b>30 lei</b>
+								<a class="add-cart cart1" href="#"><img src="resurse/Imagini/shopping-cart-24.ico"/></a>
+								<input type="hidden" value="30"/>
 							</div>
-							<img alt="Meniu" class="meniu" src="resurse/Imagini/order6.jpg"/>
+							<img alt="Meniu" class="meniu" src="resurse/Imagini/pastabolognese.jpg"/>
 						</section>
 						<section id="sectiuneaspec">
 							<div class="grid_content">
-								<a href="menu.html" class="texte"><h2>GALLERY </h2></a>
-									<a rel="stylesheet" type="text/css" href="gallery.html" class="button button3">Vezi mai multe din restaurantul nostru!</a>
+							<h2>PASTA CARBONARA</h2>
+								<p>Contine:carne de vita,paste,sos de rosii,parmezan,condimente,ceapa,oregano</p><b>30 lei</b>
+								<a class="add-cart cart2" href="#"><img src="resurse/Imagini/shopping-cart-24.ico"/></a>
+								<input type="hidden" value="30"/>
 							</div>
-							<img alt="Masa" class="galerie" src="resurse/Imagini/order5.jpg"/>
+						<img alt="Masa" class="galerie" src="resurse/Imagini/pastacarbonara.jpg"/>
 						</section>
 						<section id="sectiunea4">
 							<div class="grid_content">
-								<a href="order.html" class="texte"><h2> ORDER ONLINE </h2></a>
-									<a rel="stylesheet" type="text/css" href="order.html" class="button button4">Nu ai timp sa ajungi la noi?Nici o problema,comanda aici iar noi iti livram bunatatile alese direct la tine acasa!</a>
+							<h2> ORDER ONLINE </h2>
+								<p>Contine:carne de vita,paste,sos de rosii,parmezan,condimente,ceapa,oregano</p><b>30 lei</b>
+								<a class="add-cart cart3" href="#"><img src="resurse/Imagini/shopping-cart-24.ico"/></a>
+								<input type="hidden" value="30"/>
 							</div>
 							<img alt="Chelner" class="order" src="resurse/Imagini/order8.jpg"/>
 						</section>
 						<section id="sectiunea5">
 							<div class="grid_content">
-								<a href="book.html" class="texte"><h2> BOOK A TABLE </h2></a>
-									<a rel="stylesheet" type="text/css" href="book.html" class="button button5">Rezerva-ti o masa la cel mai fin restaurant din orasul tau!</a>	
+							<h2> BOOK A TABLE </h2>
+								<p>Contine:carne de vita,paste,sos de rosii,parmezan,condimente,ceapa,oregano</p><b>30 lei</b>
+								<a class="add-cart cart4" href="#"><img src="resurse/Imagini/shopping-cart-24.ico"/></a>
+								<input type="hidden" value="30"/>	
 							</div>
 							<img alt="Table" class="tabla" src="resurse/Imagini/order10.jpg"/>
 						</section>
 						<section id="sectiunea3">
 							<div class="grid_content">
-								<a href="menu.html" class="texte"><h2>MENU </h2></a>
-									<a rel="stylesheet" type="text/css" href="menu.html" class="button button2">Meniul care te va transpune in inima Italiei.</a>
+							<h2>MENU </h2>
+								<p>Contine:carne de vita,paste,sos de rosii,parmezan,condimente,ceapa,oregano</p><b>30 lei</b>
+								<a class="add-cart cart5" href="#"><img src="resurse/Imagini/shopping-cart-24.ico"/></a>
+								<input type="hidden" value="30"/>
 							</div>
 							<img alt="Meniu" class="meniu" src="resurse/Imagini/order9.jpg"/>
 						</section>
 						<section id="sectiuneaspec">
 							<div class="grid_content">
-								<a href="menu.html" class="texte"><h2>GALLERY </h2></a>
-									<a rel="stylesheet" type="text/css" href="gallery.html" class="button button3">Vezi mai multe din restaurantul nostru!</a>
+							<h2>GALLERY </h2>
+								<p>Contine:carne de vita,paste,sos de rosii,parmezan,condimente,ceapa,oregano</p><b>30 lei</b>
+								<a class="add-cart cart6" href="#"><img src="resurse/Imagini/shopping-cart-24.ico"/></a>
+								<input type="hidden" value="30"/>
 							</div>
 							<img alt="Masa" class="galerie" src="resurse/Imagini/order2.jpg"/>
 						</section>
 						<section id="sectiunea4">
 							<div class="grid_content">
-								<a href="order.html" class="texte"><h2> order2 ONLINE </h2></a>
-									<a rel="stylesheet" type="text/css" href="order1.html" class="button button4">Nu ai timp sa ajungi la noi?Nici o problema,comanda aici iar noi iti livram bunatatile alese direct la tine acasa!</a>
+							<h2> order2 ONLINE </h2>
+								<p>Contine:carne de vita,paste,sos de rosii,parmezan,condimente,ceapa,oregano</p><b>30 lei</b>
+								<a class="add-cart cart7" href="#"><img src="resurse/Imagini/shopping-cart-24.ico"/></a>
+								<input type="hidden" value="30"/>
 							</div>
 							<img alt="Chelner" class="order" src="resurse/Imagini/order15.jpg"/>
 						</section>
 						<section id="sectiunea5">
 							<div class="grid_content">
-								<a href="book.html" class="texte"><h2> BOOK A TABLE </h2></a>
-									<a rel="stylesheet" type="text/css" href="book.html" class="button button5">Rezerva-ti o masa la cel mai fin restaurant din orasul tau!</a>	
+							<h2> BOOK A TABLE </h2>
+								<p>Contine:carne de vita,paste,sos de rosii,parmezan,condimente,ceapa,oregano</p><b>30 lei</b>
+								<a class="add-cart cart8" href="#"><img src="resurse/Imagini/shopping-cart-24.ico"/></a>
+								<input type="hidden" value="30"/>
 							</div>
 							<img alt="Table" class="tabla" src="resurse/Imagini/order7.jpg"/>
 						</section>
 					</div>
+		</section>
+		<section id="meniu_pizza">
+		</section>
+		<section id="meniu_salads">
+		</section>
+		<section id="meniu_spec">
+		</section>
+		<section id="meniu_dessert">
+		</section>
+		<section id="meniu_soups">
+		</section>
 		<footer>
 		<h2>Contact</h2>
 			<address id="contact">

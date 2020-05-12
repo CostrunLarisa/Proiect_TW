@@ -114,6 +114,16 @@ ul.menu{
 		padding:12px;
 		transition:background-color 1s;
 	}
+	ul.menu>.cos a{
+	width:70px;
+	height:28px;
+	}
+	ul.menu>.cos>a>.shop{
+		margin-top:-68px;
+		position:relative;
+		margin-left:-41px;
+	}
+
 	ul.submenu{
 	background-color:rgb(128, 128, 128);
 	width:110%;
@@ -136,6 +146,7 @@ ul.menu{
 		background-color: rgb(128, 128, 128);
 		z-index:-1000;
 	}
+	
 	ul.submenu>li>a:hover{
 		background-color: rgb(255, 255, 255);
 		z-index:1000;
@@ -149,23 +160,23 @@ ul.menu{
 }
 @media screen and (min-width:320px) and (max-width:680px){
 .headerul{
-	height:651px;}
+	height:718px;}
 }
 
 @media screen and (min-width:842px) and (max-width:1316px){
 	.headerul{
 
-	height:300px;
+	height:390px;
 }
 }
 @media screen and (min-width:680px) and (max-width:842px){
 .headerul{
-height:386px;
+height:555px;
 margin-left:-115px;}
 }
 
 @media screen and (min-width:375px) and (max-width:425px){
 .headerul{
-	height:80vw;
+	height:90vw;
 	}
 }

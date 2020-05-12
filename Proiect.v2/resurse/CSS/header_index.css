@@ -29,12 +29,12 @@ nav {	display:inline-flex;
 	}
 	
 	ul.menu>li{
-		margin-top:10px;
+		margin-top:-3px;
 		display:block;
 		color:white;
 		font-size:16px;
-		height:1.2rem;
-		line-height:1.2rem;
+		height:1.4rem;
+		line-height:1.4rem;
 		text-align:center;					
 		list-style-type:none;
 		overflow:hidden;	
@@ -112,6 +112,19 @@ ul.menu{
 		background-color: rgb(255, 255, 255);
 		z-index:1000;
 	}
+
+	ul.menu>.cos a{
+	width:70px;
+	height:15px;
+	}
+	ul.menu>.cos>a .shop{
+		margin-top:-60px;
+		position:relative;
+		margin-left:-15px;
+		padding:27px;
+	}
+	ul.menu>.cos>a span{
+	padding:50px;}
 
 
 

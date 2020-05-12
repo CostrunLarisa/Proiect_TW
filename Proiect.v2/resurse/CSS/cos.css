@@ -1,0 +1,58 @@
+.container{
+	padding:0px;
+	justify-content:space-around;
+	align-content:center;
+	position:relative;
+}
+.bara_prod{
+	display:flex;
+	padding:0px;
+	height:73px;
+	justify-content:flex-start;
+	font-size:15px;
+	width:70vw;
+	margin-top:50px;
+	margin-left:8.5vw;
+}
+.bara_prod class{
+	align-items:center;
+}
+.products{
+
+	align-items:center;
+	flex-wrap:wrap;
+	display:flex;
+	margin-left:2vw;
+	width:100%;
+}
+.pret{
+width:15%;
+border-bottom: 2px solid;
+display:inline-flex;
+align-items:center;}
+ .produs{
+	width:35%;
+	border-bottom: 2px solid;
+	display:inline-flex;
+	align-items:center;
+}
+
+.cantitate{
+	width:20%;
+	border-bottom: 2px solid;
+	display:inline-flex;
+	align-items:center;
+}
+.total{
+width:10vw;
+border-bottom: 2px solid;
+display:flex;
+align-items:center;}
+@viewport{
+	width: 320px auto;
+}
+@-ms-viewport{
+	width:extend-to-zoom;
+	zoom: 1.0;
+}
+
