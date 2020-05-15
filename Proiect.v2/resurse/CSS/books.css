@@ -1,0 +1,62 @@
+
+/*.continut{
+	padding:20px;
+	border-radius:5px;
+}*/
+html,body{
+	height:100%;
+}
+.footer{
+	background-color:#000000;
+}
+.continut{
+	padding:35px 0px 35px;
+	margin-right:25px;
+}
+
+input[type=text],select,textarea{
+	width:100%;
+	padding:12px;
+	border:1px solid #ccc;
+	border-radius:4px;
+}
+	
+select{
+	width:40%;
+}
+input[type=submit]{
+	background-color:#DEB887;
+	padding: 12px 20px;
+	border:none;
+	border-radius:4px;
+	cursor:pointer;
+	float:right;
+}
+.rand{
+	height:20px;
+}
+.coloana2{
+	float:left;
+	width:70%;
+	margin-top:6px;
+}
+	
+select{
+	resize:vertical;
+}
+label{
+	display:inline-block;
+	float:left;
+	width:15%;
+	margin-top:12px;
+}
+textarea{
+	resize:none;
+	height:200px;
+}
+.rand:after{				/*proprietate css pentru a pastra elementele formularului la locul lor*/
+	content:"";
+	display:table;
+	clear:both;
+}
+	

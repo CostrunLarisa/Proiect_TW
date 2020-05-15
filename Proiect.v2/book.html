@@ -4,6 +4,8 @@
 		<title>Book a table</title>
 		<link rel="stylesheet" type="text/css" href="resurse/CSS/header.css">
 		<link rel="stylesheet" type="text/css" href="resurse/CSS/footer.css">
+		<link rel="stylesheet" type="text/css" href="resurse/CSS/books.css">
+		<script src="resurse/Javascript/book.js"></script>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +13,6 @@
 		<meta name="description" content="Rezervari">
 		<meta name="keywords" content="rezervari,eveniment,intervale,disponibilitate">
 		<link rel="shortcut icon" type="image/x-icon" href="resurse/Imagini/./favicon.ico"/>
-		<link rel="stylesheet" type="text/css" href="theme.css">
 		<style>
 		html{
 		scroll-behavior:smooth;
@@ -56,7 +57,154 @@
 					</header>
 			</div>
 		</div>
-
+	<div class="continut">
+		<h1>Book a table at Meronne!</h1>
+		<aside><b>Rezervarile se efectueaza incepand cu ora 08:00.<b></aside>
+			<form action="action_page.php">
+			<div class="rand">
+				
+					<label for="nume"><b>Nume</b></label>
+				
+				<div class="coloana2">
+					<input type="text" placeholder="Introduceti numele" name ="nume" required>
+				</div>	
+			</div>
+			<div class="rand">
+					<label for="prenume"><b>Prenume</b></label>
+	
+				<div class="coloana2">
+					<input type="text" placeholder="Introduceti prenumele" name ="prenume" required>
+				</div>
+			</div>
+			<div class="rand">
+					
+						<label for="email"><b>E-mail</b></label>
+					
+					<div class="coloana2">
+						<input type="text" placeholder="Introduceti email-ul" name ="email" required>			
+					</div>
+			</div>
+			<div class="rand">
+				
+					<label for="telefon"><b>Nr. telefon</b></label>
+				
+				<div class="coloana2">
+					<input type="text" placeholder="Introduceti nr. de telefon" name ="telefon" required>
+				</div>
+			</div>
+			<div class="rand">
+		
+					<label for="data"><b>Selecteaza data</b></label>
+			
+				<div class="coloana2">
+					<select id="data" name="data">
+					</select>
+				</div>
+			</div>
+			<div class="rand">
+		
+					<label for="persoana"><b>Nr. de persoane</b></label>
+			
+				<div class="coloana2">
+					<select id="data" name="data">
+					<option value="">Masa de o persoana</option>
+					<option value="">Mase de 2 persoane</option>
+					<option value="">Masa de 4 persoane</option>
+					<option value="">Masa de 6 persoane</option>
+					<option value="">Masa de 8 persoane</option>
+					<option value="">Masa de 10-12 persoane</option>
+					<option value="">Masa de 14-18 persoane</option>
+					<option value="">Masa de 20-30 persoane</option>
+					</select>
+				</div>
+			</div>
+			<div class="rand">
+			
+					<label for="ora"><b>Selecteaza ora</b></label>
+		
+				<div class="coloana2">
+				<select id="ora" name="ora">
+					<option value="">08:00</option>
+					<option value="">08:15</option>
+					<option value="">08:30</option>
+					<option value="">08:45</option>
+					<option value="">09:00</option>
+					<option value="">09:15</option>
+					<option value="">09:30</option>
+					<option value="">09:45</option>
+					<option value="">10:00</option>
+					<option value="">10:15</option>
+					<option value="">10:30</option>
+					<option value="">10:45</option>
+					<option value="">11:00</option>
+					<option value="">11:15</option>
+					<option value="">11:30</option>
+					<option value="">11:45</option>
+					<option value="">12:00</option>
+					<option value="">12:15</option>
+					<option value="">12:30</option>
+					<option value="">12:45</option>
+					<option value="">13:00</option>
+					<option value="">13:15</option>
+					<option value="">13:30</option>
+					<option value="">13:45</option>
+					<option value="">14:00</option>
+					<option value="">14:15</option>
+					<option value="">14:30</option>
+					<option value="">14:45</option>
+					<option value="">15:00</option>
+					<option value="">15:15</option>
+					<option value="">15:30</option>
+					<option value="">15:45</option>
+					<option value="">16:00</option>
+					<option value="">16:15</option>
+					<option value="">16:30</option>
+					<option value="">16:45</option>
+					<option value="">17:00</option>
+					<option value="">17:15</option>
+					<option value="">17:30</option>
+					<option value="">17:45</option>	
+					<option value="">18:00</option>
+					<option value="">18:15</option>
+					<option value="">18:30</option>
+					<option value="">18:45</option>
+					<option value="">19:00</option>
+					<option value="">19:15</option>
+					<option value="">19:30</option>
+					<option value="">19:45</option>
+					<option value="">20:00</option>
+					<option value="">20:15</option>
+					<option value="">20:30</option>
+					<option value="">20:45</option>
+					<option value="">21:00</option>
+					<option value="">21:15</option>
+					<option value="">21:30</option>
+					<option value="">21:45</option>
+					<option value="">22:00</option>
+					<option value="">22:15</option>
+					<option value="">22:30</option>
+					<option value="">22:45</option>
+				</select>
+				</div>
+			</div>
+			<div class="rand">
+		
+					<label for="detalii"><b>Specificatii/preferinte</b></label>
+		
+				<div class="coloana2">
+					<textarea id="subiect" name="subiect" placeholder="Comunica preferinte..." maxlength="500" onkeyup="numara(this)"></textarea>
+					<div id="the-count">
+						<span id="current">0</span>
+						<span id="max">/500</span
+					</div>
+				</div>
+			</div>
+			<div class="rand">
+				<input type ="submit" value="Rezerva">
+			</div>
+			</form>
+		</div
+	</div>
 		<footer>
 		<h2>Contact</h2>
 			<address id="contact">
@@ -66,6 +214,8 @@
 				<a href="index.html#sectiune11">Before you contact us,be sure wheter the answer is on the page or not!Jump to the first page!</a>
 			</address>
 		</footer>
+	<div class="footer">
 		<div class="restaurant2"></div>
+	</div>
 	</body>
 </html>

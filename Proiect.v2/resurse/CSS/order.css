@@ -1,4 +1,7 @@
 div{display:block;}
+#continut{
+	padding:75px 5px 0px;
+}
 body{
 background-color:#F5F5DC;}
 #continut{
@@ -19,7 +22,7 @@ FONT-FAMILY:New Century Schoolbook, TeX Gyre Schola, serif;}
 
 #sectiunea4,#sectiunea5,#sectiunea3,#sectiuneaspec{
 padding:0px;
-margin-left:24px;}
+}
 
 .grid-container-intro{
 	display:grid;
@@ -35,11 +38,10 @@ margin-left:24px;}
 	background: rgba(255,255,255);
 	opacity:0.8;
 	border-radius:100%;
-	margin-top:5vw;
-	margin-left:1%;
+	margin-left:9%;
 	transition:background-color 1s;
-	height:4vw;
-	width:20vw;
+	height:10%;
+	width:20%;
 }
 
 .grid_contentIntro:hover{
@@ -73,24 +75,24 @@ padding:0px;
 
 .grid-container{
 	display:grid;
-	width:50vw;
+	width:100%;
 	justify-content:flex-start;
-	grid-template-columns: 28vw 28vw 28vw;	
-	margin-left:-50px;
+	grid-template-columns: 450px 450px 450px;	
+	margin-left:0px;
 }
 .grid_content
 {
-	font-size: 1vw;
+	font-size: 16px;
 	text-align: center-left;
 	z-index:1;
 	width:24.5%;
-	margin-left:-25px;
+	margin-left:-16px;
 	transition:.5s ease;
 	position:absolute;
 	background: rgba(255,255,255);
 	transition:.5s ease;
 	overflow:hidden;
-	margin-top:16%;
+	margin-top:19%;
 	z-index:100;
 }
 
@@ -109,18 +111,19 @@ padding:0px;
 .galerie,.meniu,.order,.tabla{
 background-size:cover;
 background-repeat:no-repeat;
-width:28vw;
+
+width:100%;
 /*height:400px;*/
   margin-top: -40px;
   font-size: 1.5vw;
   text-align: center;
  transition: .3s ease;
  position:relative;
- margin-left:-55px;
+ margin-left:-45px;
 }
 #sectiuneaspec:hover .galerie,#sectiunea3:hover .meniu,#sectiunea4:hover .order,#sectiunea5:hover .tabla{
 	
-width:33vw;
+width:110%;
 font-size:20px;
 text-align:center;
  position:relative;
@@ -130,8 +133,8 @@ z-index:9;
 width:100%;}
 #sectiuneaspec:hover .grid_content,#sectiunea3:hover .grid_content,#sectiunea4:hover .grid_content,#sectiunea5:hover .grid_content{
 	overflow:visible;
-	height:6%;
-	width:29.2vw;
+	height:10%;
+	width:29.2%;
 	z-index:1000;
 }
 #sectiuneaspec>.galerie:hover .grid_content,.meniu:hover .grid_content,.order:hover .grid_content,.tabla:hover .grid_content{
@@ -149,7 +152,7 @@ width:24px;
 overflow:hidden;
 float:right;
 position:absolute;
-margin-left:60%;}
+margin-left:21em;}
 .grid_content b{
 	margin-top:20px;
 	position:absolute;
@@ -166,5 +169,32 @@ margin-left:60%;}
 @-ms-viewport{
 	width:extend-to-zoom;
 	zoom: 1.0;
+}
+
+@media screen and (max-width:1316px){
+	.grid-container-intro{
+
+	display:block;
+	}
+	.grid-container,.grid_content,.add-cart{
+		display:inline-flex;
+		flex-wrap:wrap;
+	}
+	.grid_content{
+		font-size:12px;
+	}
+	.grid_content b{
+		margin-left:70%;
+	}
+	.galerie,.meniu,.order,.tabla{
+		width:80%;
+	}
+	#sectiuneaspec:hover .galerie,#sectiunea3:hover .meniu,#sectiunea4:hover .order,#sectiunea5:hover .tabla{
+		width:92%;
+	}
+	#sectiuneaspec:hover .grid_content,#sectiunea3:hover .grid_content,#sectiunea4:hover .grid_content,#sectiunea5:hover .grid_content{
+		width:50%;
+		/*font-size:1.5vw;*/
+	}
 }
 

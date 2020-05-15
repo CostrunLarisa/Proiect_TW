@@ -1,4 +1,6 @@
-
+footer{
+	clear:both;
+}
 .restaurant2{
 background-image:url("../Imagini/restaurant2.jpg");
 background-size:cover;

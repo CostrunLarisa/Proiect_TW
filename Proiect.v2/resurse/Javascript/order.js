@@ -6,13 +6,64 @@ var mancare=[
 		selectat:0
 	},
 	{
+		nume:"Spaghetti",
+		tag:"spaghetti",
+		pret:21,
+		selectat:0
+	},
+	{
+		nume:"Rigattoni",
+		tag:"rigattoni",
+		pret:26,
+		selectat:0
+	},
+	{
+		nume:"Chicken Pasta",
+		tag:"chickenpasta",
+		pret:25,
+		selectat:0
+	},
+	{
+		nume:"Penne Gorgonzola",
+		tag:"pennegorgonzola",
+		pret:35,
+		selectat:0
+	},
+	{
+		nume:"Spaghetti Amatriciana",
+		tag:"spaghettiamatriciana",
+		pret:40,
+		selectat:0
+	},
+	{
 		nume:"Pasta Carbonara",
 		tag:"pastacarbonara",
-		pret:35,
+		pret:29,
+		selectat:0
+	},
+	{
+		nume:"Pesto Pasta",
+		tag:"pestopasta",
+		pret:38,
+		selectat:0
+	},
+	{
+		nume:"Spaghetti Aglio",
+		tag:"spaghettiaglio",
+		pret:45,
 		selectat:0
 	}
 ];
 window.onload=function(){
+/*resize()
+function resize(){
+	var content=document.querySelectorAll(".grid_content");
+	var imagini=document.querySelectorAll(".meniu")[0];
+	var c=imagini.getBoundingClientRect();
+	for(var ob=0;ob<content.length;ob++)
+	{content[ob].style.width=""+c.width-100+"px";
+	}
+}*/
 var produse=document.querySelectorAll(".add-cart");
 onLoadNumarItem();
 comanda();
@@ -26,9 +77,9 @@ function onLoadNumarItem(){								/*pastram nr.de produse chiar daca dam refres
 	}
 function setItems(alegere){
 		var dejaPuse=localStorage.getItem("ProduseInCos");
-		dejaPuse=JSON.parse(dejaPuse);
-		if(dejaPuse!=null)
-		{	if(dejaPuse[alegere.tag]!=undefined)
+		if(dejaPuse)
+		{	dejaPuse=JSON.parse(dejaPuse);
+			if(dejaPuse[alegere.tag]!=undefined)
 			{
 				dejaPuse[alegere.tag].selectat+=1;}
 			else{
@@ -39,7 +90,7 @@ function setItems(alegere){
 					}
 			}
 		}
-		else if(dejaPuse==null){
+		else {
 			alegere.selectat=1;
 			dejaPuse={
 				[alegere.tag]:alegere
@@ -65,7 +116,6 @@ function numarItem(alegere){
 	
 function total(alegere){
 	let pret=localStorage.getItem("total");
-	console.log(pret);
 	if(pret==null)
 	{
 		localStorage.setItem("total",alegere.pret);}
@@ -84,9 +134,9 @@ for(let i=0;i<produse.length;i++)
 
 function comanda(){
 	var x=localStorage.getItem("ProduseInCos");
-	x=JSON.parse(x);
 	var cos=document.querySelector(".products");
-	if(x && cos){	
+	if(x && cos){
+			x=JSON.parse(x);
 			cos.innerHTML="";
 			Object.values(x).map(item => {
 				var nou=document.createElement("DIV");
@@ -141,10 +191,20 @@ function comanda(){
 				less.onclick=function(){
 					if(parseInt(item.selectat) > 0)
 					{valoare=valoare-parseInt(item.pret);
-						/*item.selectat=parseInt(item.selectat)-1;*/
-						x[item.tag].selectat=parseInt(item.selectat)-1;
+						item.selectat=parseInt(item.selectat)-1;
+						var update=localStorage.getItem("ProduseInCos");
+						update=JSON.parse(update);
+						update[item.tag].selectat-=1;
+						localStorage.setItem("ProduseInCos",JSON.stringify(update));
 						txt.innerHTML=item.selectat;
 						total.innerHTML=valoare+" lei";	
+						var nrCos=localStorage.getItem("numarItem");
+						nrCos=parseInt(nrCos);
+						localStorage.setItem("numarItem",nrCos-1);
+						document.querySelector(" .cos span").textContent=nrCos-1;
+						let pret=localStorage.getItem("total");
+						pret=parseInt(pret);
+						localStorage.setItem("total",pret-item.pret);
 					}
 					if(parseInt(item.selectat) == 0)
 					{
@@ -156,36 +216,83 @@ function comanda(){
 						cantitate.style.display="none";
 						cost.style.display="none";
 						total.style.display="none";
-						item.selectat=parseInt(item.selectat)-1;
-						localStorage.setItem("ProduseInCos",item.tag);
-						localStorage.removeItem(item.tag);
-						localStorage.removeItem(x[item.tag]);
+						var val=localStorage.getItem("ProduseInCos");
+						localStorage.removeItem("ProduseInCos"); 
+						val=JSON.parse(val);
+						if(val.length==1)localStorage.removeItem("ProduseInCos");     /*daca e singurul element din cos,in momentul in care o sa itereze
+																						itereazaprin proprietatile obiectului,asa ca il stergem*/
+						else{for(var i of Object.values(val))
+							{	if(i.tag!=item.tag)
+								{
+									var aux=localStorage.getItem("ProduseInCos");
+									if(aux)
+									{
+										aux=JSON.parse(aux);
+										aux={... aux, [i.tag]:i}
+									}
+									else{
+										aux={[i.tag]:i}
+									}
+									localStorage.setItem("ProduseInCos",JSON.stringify(aux));
+								}
+							}
+						}
+						var nrCos=localStorage.getItem("numarItem");
+						nrCos=parseInt(nrCos);
+						if(nrCos==0)
+						{
+						cos.innerHTML="Cosul dumneavoastra este gol.";
+						localStorage.removeItem("ProduseInCos");
+						}
 					}
 						
 				}
 				greater.onclick=function(){
 						valoare=valoare+parseInt(item.pret);
 						item.selectat=parseInt(item.selectat)+1;
+						var update=localStorage.getItem("ProduseInCos");
+						update=JSON.parse(update);
+						update[item.tag].selectat+=1;
+						localStorage.setItem("ProduseInCos",JSON.stringify(update));
 						txt.innerHTML=item.selectat;
 						total.innerHTML=valoare+" lei";
-	
+						var nrCos=localStorage.getItem("numarItem");
+						nrCos=parseInt(nrCos);
+						localStorage.setItem("numarItem",nrCos+1);
+						document.querySelector(" .cos span").textContent=nrCos+1;
+						let pret=localStorage.getItem("total");
+						pret=parseInt(pret);
+						localStorage.setItem("total",pret+item.pret);
 					}
+				var nrCos=localStorage.getItem("numarItem");
+				nrCos=parseInt(nrCos);
+				if(nrCos==0)
+				{
+				cos.innerHTML="Cosul dumneavoastra este gol.";
+				localStorage.removeItem("ProduseInCos");
+				}
 				imagine.onclick=function(){
 					
 				}
 				
 				});
-				
-				var container=document.querySelector(".container");
-				var finalizare=document.createElement("button");
-				finalizare.style.padding="10px";
-				finalizare.innerHTML+="Plaseaza comanda";
-				container.appendChild(finalizare);
-				finalizare.onclick=function(){
-					cos.innerHTML="Cosul dumneavostra este gol.";
-					localStorage.clear();
+				var nrCos=localStorage.getItem("numarItem");
+				nrCos=parseInt(nrCos);
+				if(nrCos!=0)
+				{
+					var container=document.querySelector(".container");
+					var finalizare=document.createElement("button");
+					finalizare.style.padding="10px";
+					finalizare.style.float="right";
+					finalizare.innerHTML+="Plaseaza comanda";
+					container.appendChild(finalizare);
+					finalizare.onclick=function(){
+						cos.innerHTML="Cosul dumneavostra este gol.";
+						localStorage.clear();
+					}
 				}
-		
+				
+			
 	}
 	else if(cos && x==null){cos.innerHTML="Cosul dumneavoastra este gol.";}
 }

@@ -17,6 +17,11 @@
 .bara_prod class{
 	align-items:center;
 }
+.container{
+	box-sizing:border-box;
+	clear:both;
+}
+
 .products{
 
 	align-items:center;
@@ -24,6 +29,7 @@
 	display:flex;
 	margin-left:2vw;
 	width:100%;
+	clear:both;
 }
 .pret{
 width:15%;
@@ -55,4 +61,8 @@ align-items:center;}
 	width:extend-to-zoom;
 	zoom: 1.0;
 }
+@media screen and (max-width:1316px){
+	.container{
+		display:inline-block;
+}}
 
