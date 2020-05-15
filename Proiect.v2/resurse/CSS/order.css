@@ -1,18 +1,18 @@
 div{display:block;}
-#continut{
-	padding:75px 5px 0px;
+#continut {
+	padding:0px 0px 10px 15px;
+	margin-left:-50px;
 }
+
 body{
 background-color:#F5F5DC;}
-#continut{
-	padding:0px;
-}
-#continut>h1{
+
+#continut>h2{
 	font-size:3vw;
 	text-align:center;
 	border-bottom:3px solid black;
 }
-#sectiunea5>h2{
+#sectiunea5>h4{
 border-top: 5px double;
 width:50%;
 margin-left:170px;
@@ -40,7 +40,7 @@ padding:0px;
 	border-radius:100%;
 	margin-left:9%;
 	transition:background-color 1s;
-	height:10%;
+	height:40px;
 	width:20%;
 }
 
@@ -85,8 +85,8 @@ padding:0px;
 	font-size: 16px;
 	text-align: center-left;
 	z-index:1;
-	width:24.5%;
-	margin-left:-16px;
+	width:25.7%;
+	margin-left:-15px;
 	transition:.5s ease;
 	position:absolute;
 	background: rgba(255,255,255);
@@ -103,7 +103,7 @@ padding:0px;
 	transition:.5s ease;
 	}
 
-#sectiuneaspec>.grid_content h2,#sectiunea3>.grid_content h2,#sectiunea4>.grid_content h2,#sectiunea5>.grid_content h2{
+#sectiuneaspec>.grid_content h4,#sectiunea3>.grid_content h4,#sectiunea4>.grid_content h4,#sectiunea5>.grid_content h4{
 	margin-top:-8%;
 	position:absolute;
 }
@@ -133,8 +133,8 @@ z-index:9;
 width:100%;}
 #sectiuneaspec:hover .grid_content,#sectiunea3:hover .grid_content,#sectiunea4:hover .grid_content,#sectiunea5:hover .grid_content{
 	overflow:visible;
-	height:10%;
-	width:29.2%;
+	height:70px;
+	width:28.7%;
 	z-index:1000;
 }
 #sectiuneaspec>.galerie:hover .grid_content,.meniu:hover .grid_content,.order:hover .grid_content,.tabla:hover .grid_content{
@@ -146,17 +146,17 @@ width:100%;}
 	color:#000000;
 }
 .add-cart{
-margin-top:-20px;
+margin-top:-10px;
 height:24px;
 width:24px;
 overflow:hidden;
 float:right;
 position:absolute;
-margin-left:21em;}
+margin-left:23em;}
 .grid_content b{
-	margin-top:20px;
+	margin-top:35px;
 	position:absolute;
-	margin-left:55%;}
+	margin-left:50%;}
 }
 
 #sectiunea4>.order-container>p

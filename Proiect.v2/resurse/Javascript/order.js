@@ -4,11 +4,12 @@ var mancare=[
 		tag:"pastabolognese",
 		pret:30,
 		selectat:0
-	},
+	}
+	,
 	{
-		nume:"Spaghetti",
-		tag:"spaghetti",
-		pret:21,
+		nume:"Pasta Carbonara",
+		tag:"pastacarbonara",
+		pret:29,
 		selectat:0
 	},
 	{
@@ -36,12 +37,6 @@ var mancare=[
 		selectat:0
 	},
 	{
-		nume:"Pasta Carbonara",
-		tag:"pastacarbonara",
-		pret:29,
-		selectat:0
-	},
-	{
 		nume:"Pesto Pasta",
 		tag:"pestopasta",
 		pret:38,
@@ -51,6 +46,282 @@ var mancare=[
 		nume:"Spaghetti Aglio",
 		tag:"spaghettiaglio",
 		pret:45,
+		selectat:0
+	},
+	{
+		nume:"Spaghetti",
+		tag:"spaghetti",
+		pret:21,
+		selectat:0
+	},
+	{
+		nume:"Quattro Stagioni.",
+		tag:"quattrostagioni.",
+		pret:30,
+		selectat:0
+	},
+	{
+		nume:"Quattro Formaggi",
+		tag:"quattroformaggi",
+		pret:0,
+		selectat:0
+	},
+	{
+		nume:"Romana",
+		tag:"romana",
+		pret:0,
+		selectat:0
+	},
+	{
+		nume:"Americana",
+		tag:"americana",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Gorgonzola",
+		tag:"gorgonzola",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Calzone",
+		tag:"calzone",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Mediterranea",
+		tag:"mediterranea",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Parmigiana",
+		tag:"parmigiana",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Campagnola",
+		tag:"campagnola",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Summer Farro ",
+		tag:"summerfarro ",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Curtido",
+		tag:"curtido",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Mimosa",
+		tag:"mimosa",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Greek Salad",
+		tag:"greeksalad",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Tuna Salad",
+		tag:"tunasalad",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Broad Bean",
+		tag:"broadbean",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Bresaola",
+		tag:"bresaola",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Quinoa Salad",
+		tag:"quinoasalad",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Sweet Potato Salad",
+		tag:"sweetpotatosalad",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Lasagna",
+		tag:"lasagna",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Paella",
+		tag:"paella",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Pork Steak",
+		tag:"porksteak",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Veneto",
+		tag:"veneto",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Braciole",
+		tag:"braciole",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Goulash",
+		tag:"goulash",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Ciambotta",
+		tag:"ciambotta",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Vitello",
+		tag:"vitello",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Tortellini",
+		tag:"tortellini",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Cheesecake",
+		tag:"cheesecake",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Waffles",
+		tag:"waffles",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Cake In a Pot",
+		tag:"cakeinapot",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"Chocolate Canolli",
+		tag:"chocolatecanolli",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
+		selectat:0
+	},
+	{
+		nume:"",
+		tag:"",
+		pret:,
 		selectat:0
 	}
 ];
@@ -150,7 +421,7 @@ function comanda(){
 				imagine.style.cursor="pointer";
 				nou.appendChild(imagine);
 				var imagine2=document.createElement("IMG");
-				imagine2.src="../Proiect.v2/resurse/Imagini/pastabolognese.jpg";
+				imagine2.src="../Proiect.v2/resurse/Imagini/"+item.tag+".jpg";
 				imagine2.style.width="150px";
 				
 				nou.appendChild(imagine2);
