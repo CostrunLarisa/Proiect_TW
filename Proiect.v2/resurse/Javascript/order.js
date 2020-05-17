@@ -1,328 +1,328 @@
 var mancare=[
 	{
-		nume:"Pasta Bolognese",
-		tag:"pastabolognese",
-		pret:30,
-		selectat:0
+		nume: "Pasta Bolognese",
+		tag: "pastabolognese",
+		pret: 30,
+		selectat: 0
 	}
 	,
 	{
-		nume:"Pasta Carbonara",
-		tag:"pastacarbonara",
-		pret:29,
-		selectat:0
+		nume: "Pasta Carbonara",
+		tag: "pastacarbonara",
+		pret: 29,
+		selectat: 0
 	},
 	{
-		nume:"Rigattoni",
-		tag:"rigattoni",
-		pret:26,
-		selectat:0
+		nume: "Rigattoni",
+		tag: "rigattoni",
+		pret: 26,
+		selectat: 0
 	},
 	{
-		nume:"Chicken Pasta",
-		tag:"chickenpasta",
-		pret:25,
-		selectat:0
+		nume: "Chicken Pasta",
+		tag: "chickenpasta",
+		pret: 25,
+		selectat: 0
 	},
 	{
-		nume:"Penne Gorgonzola",
-		tag:"pennegorgonzola",
-		pret:35,
-		selectat:0
+		nume: "Penne Gorgonzola",
+		tag: "pennegorgonzola",
+		pret: 35,
+		selectat: 0
 	},
 	{
-		nume:"Spaghetti Amatriciana",
-		tag:"spaghettiamatriciana",
-		pret:40,
-		selectat:0
+		nume: "Spaghetti Amatriciana",
+		tag: "spaghettiamatriciana",
+		pret: 40,
+		selectat: 0
 	},
 	{
-		nume:"Pesto Pasta",
-		tag:"pestopasta",
-		pret:38,
-		selectat:0
+		nume: "Pesto Pasta",
+		tag: "pestopasta",
+		pret: 38,
+		selectat: 0
 	},
 	{
-		nume:"Spaghetti Aglio",
-		tag:"spaghettiaglio",
-		pret:45,
-		selectat:0
+		nume: "Spaghetti Aglio",
+		tag: "spaghettiaglio",
+		pret: 45,
+		selectat: 0
 	},
 	{
-		nume:"Spaghetti",
-		tag:"spaghetti",
-		pret:21,
-		selectat:0
+		nume: "Spaghetti",
+		tag: "spaghetti",
+		pret: 21,
+		selectat: 0
 	},
 	{
-		nume:"Quattro Stagioni.",
-		tag:"quattrostagioni.",
+		nume: "Quattro Stagioni.",
+		tag: "quattrostagioni.",
 		pret:30,
+		selectat: 0
+	},
+	{
+		nume: "Quattro Formaggi",
+		tag: "quattroformaggi",
+		pret: 40,
+		selectat: 0
+	},
+	{
+		nume: "Romana",
+		tag: "romana",
+		pret: 32,
+		selectat: 0
+	},
+	{
+		nume: "Americana",
+		tag: "americana",
+		pret: 45,
 		selectat:0
 	},
 	{
-		nume:"Quattro Formaggi",
-		tag:"quattroformaggi",
-		pret:0,
-		selectat:0
+		nume: "Gorgonzola",
+		tag: "gorgonzola",
+		pret: 65,
+		selectat: 0
 	},
 	{
-		nume:"Romana",
-		tag:"romana",
-		pret:0,
-		selectat:0
+		nume: "Calzone",
+		tag: "calzone",
+		pret: 24,
+		selectat: 0
 	},
 	{
-		nume:"Americana",
-		tag:"americana",
-		pret:,
-		selectat:0
+		nume: "Mediterranea",
+		tag: "mediterranea",
+		pret: 38,
+		selectat: 0 
 	},
 	{
-		nume:"Gorgonzola",
-		tag:"gorgonzola",
-		pret:,
-		selectat:0
+		nume: "Parmigiana",
+		tag: "parmigiana",
+		pret: 47,
+		selectat: 0
 	},
 	{
-		nume:"Calzone",
-		tag:"calzone",
-		pret:,
-		selectat:0
+		nume: "Campagnola",
+		tag: "campagnola",
+		pret: 50,
+		selectat: 0
 	},
 	{
-		nume:"Mediterranea",
-		tag:"mediterranea",
-		pret:,
-		selectat:0
+		nume: "Summer Farro ",
+		tag: "summerfarro ",
+		pret: 31,
+		selectat: 0
 	},
 	{
-		nume:"Parmigiana",
-		tag:"parmigiana",
-		pret:,
-		selectat:0
+		nume: "Curtido",
+		tag: "curtido",
+		pret: 29,
+		selectat: 0
 	},
 	{
-		nume:"Campagnola",
-		tag:"campagnola",
-		pret:,
-		selectat:0
+		nume: "Mimosa",
+		tag: "mimosa",
+		pret: 30,
+		selectat: 0
 	},
 	{
-		nume:"Summer Farro ",
-		tag:"summerfarro ",
-		pret:,
-		selectat:0
+		nume: "Greek Salad",
+		tag: "greeksalad",
+		pret: 34,
+		selectat: 0
 	},
 	{
-		nume:"Curtido",
-		tag:"curtido",
-		pret:,
-		selectat:0
+		nume: "Tuna Salad",
+		tag: "tunasalad",
+		pret: 33,
+		selectat: 0
 	},
 	{
-		nume:"Mimosa",
-		tag:"mimosa",
-		pret:,
-		selectat:0
+		nume: "Broad Bean",
+		tag: "broadbean",
+		pret: 24,
+		selectat: 0
 	},
 	{
-		nume:"Greek Salad",
-		tag:"greeksalad",
-		pret:,
-		selectat:0
+		nume: "Bresaola",
+		tag: "bresaola",
+		pret: 38,
+		selectat: 0
 	},
 	{
-		nume:"Tuna Salad",
-		tag:"tunasalad",
-		pret:,
-		selectat:0
+		nume: "Quinoa Salad",
+		tag: "quinoasalad",
+		pret: 23,
+		selectat: 0
 	},
 	{
-		nume:"Broad Bean",
-		tag:"broadbean",
-		pret:,
-		selectat:0
+		nume: "Sweet Potato Salad",
+		tag: "sweetpotatosalad",
+		pret: 39,
+		selectat: 0
 	},
 	{
-		nume:"Bresaola",
-		tag:"bresaola",
-		pret:,
-		selectat:0
+		nume: "Lasagna",
+		tag: "lasagna",
+		pret: 40,
+		selectat: 0
 	},
 	{
-		nume:"Quinoa Salad",
-		tag:"quinoasalad",
-		pret:,
-		selectat:0
+		nume: "Paella",
+		tag: "paella",
+		pret: 59,
+		selectat: 0
 	},
 	{
-		nume:"Sweet Potato Salad",
-		tag:"sweetpotatosalad",
-		pret:,
-		selectat:0
+		nume: "Pork Steak",
+		tag: "porksteak",
+		pret: 70,
+		selectat: 0
 	},
 	{
-		nume:"Lasagna",
-		tag:"lasagna",
-		pret:,
-		selectat:0
+		nume: "Veneto",
+		tag: "veneto",
+		pret: 49,
+		selectat: 0
 	},
 	{
-		nume:"Paella",
-		tag:"paella",
-		pret:,
-		selectat:0
+		nume: "Braciole",
+		tag: "braciole",
+		pret: 40,
+		selectat: 0 
 	},
 	{
-		nume:"Pork Steak",
-		tag:"porksteak",
-		pret:,
-		selectat:0
+		nume: "Goulash",
+		tag: "goulash",
+		pret: 81,
+		selectat: 0
 	},
 	{
-		nume:"Veneto",
-		tag:"veneto",
-		pret:,
-		selectat:0
+		nume: "Ciambotta",
+		tag: "ciambotta",
+		pret: 92,
+		selectat: 0
 	},
 	{
-		nume:"Braciole",
-		tag:"braciole",
-		pret:,
-		selectat:0
+		nume: "Vitello",
+		tag: "vitello",
+		pret: 45,
+		selectat: 0
 	},
 	{
-		nume:"Goulash",
-		tag:"goulash",
-		pret:,
-		selectat:0
+		nume: "Tortellini",
+		tag: "tortellini",
+		pret: 52,
+		selectat: 0
 	},
 	{
-		nume:"Ciambotta",
-		tag:"ciambotta",
-		pret:,
-		selectat:0
+		nume: "Cheesecake",
+		tag: "cheesecake",
+		pret: 33,
+		selectat: 0
 	},
 	{
-		nume:"Vitello",
-		tag:"vitello",
-		pret:,
-		selectat:0
+		nume: "Waffles",
+		tag: "waffles",
+		pret: 25,
+		selectat: 0
 	},
 	{
-		nume:"Tortellini",
-		tag:"tortellini",
-		pret:,
-		selectat:0
+		nume: "Cake In a Pot",
+		tag: "cakeinapot",
+		pret: 27,
+		selectat: 0
 	},
 	{
-		nume:"Cheesecake",
-		tag:"cheesecake",
-		pret:,
-		selectat:0
+		nume: "Chocolate Canolli",
+		tag: "chocolatecanolli",
+		pret: 35,
+		selectat: 0 
 	},
 	{
-		nume:"Waffles",
-		tag:"waffles",
-		pret:,
-		selectat:0
+		nume: "Traditional Cake",
+		tag: "traditionalcake",
+		pret: 40,
+		selectat: 0 
 	},
 	{
-		nume:"Cake In a Pot",
-		tag:"cakeinapot",
-		pret:,
-		selectat:0
+		nume: "Tiramisu",
+		tag: "tiramisu",
+		pret: 47,
+		selectat: 0
 	},
 	{
-		nume:"Chocolate Canolli",
-		tag:"chocolatecanolli",
-		pret:,
-		selectat:0
+		nume: "Cannoli",
+		tag: "cannoli",
+		pret: 36,
+		selectat: 0
 	},
 	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
+		nume: "Bindi Hazelnut",
+		tag: "bindihazelnut",
+		pret: 20,
+		selectat: 0
 	},
 	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
+		nume: "Hazelnut Cake",
+		tag: "hazelnutcake",
+		pret: 40,
+		selectat: 0
 	},
 	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
+		nume: "Minestrone",
+		tag: "minestrone",
+		pret: 30,
+		selectat: 0
 	},
 	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
+		nume: "Ribollita",
+		tag: "ribollita",
+		pret: 29,
+		selectat: 0
 	},
 	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
+		nume: "Panada",
+		tag: "panada",
+		pret: 30,
+		selectat: 0
 	},
 	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
+		nume: "Ginestrata",
+		tag: "ginestrata",
+		pret: 28,
+		selectat: 0
 	},
 	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
+		nume: "Buridda",
+		tag: "buridda",
+		pret: 40,
+		selectat: 0
 	},
 	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
+		nume: "Macu",
+		tag: "macu",
+		pret: 35,
+		selectat: 0
 	},
 	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
+		nume: "Garmugia",
+		tag: "garmugia",
+		pret: 37,
+		selectat: 0
 	},
 	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
+		nume: "Zuppa Toscana",
+		tag: "zuppatoscana",
+		pret: 40,
+		selectat: 0
 	},
 	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
-	},
-	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
-	},
-	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
-	},
-	{
-		nume:"",
-		tag:"",
-		pret:,
-		selectat:0
+		nume: "Walnut Soup",
+		tag: "walnutsoup",
+		pret: 37,
+		selectat: 0
 	}
 ];
 window.onload=function(){
@@ -543,7 +543,36 @@ function comanda(){
 				localStorage.removeItem("ProduseInCos");
 				}
 				imagine.onclick=function(){
-					
+                    cantitate.innerHTML="";
+				    nou.innerHTML="";
+				    cost.innerHTML="";
+				    total.innerHTML="";
+				    nou.style.display="none";
+				    cantitate.style.display="none";
+				    cost.style.display="none";
+				    total.style.display="none";
+                    var nrCos=localStorage.getItem("numarItem");
+				    nrCos=parseInt(nrCos);
+				    localStorage.setItem("numarItem",nrCos-item.selectat);
+					document.querySelector(" .cos span").textContent=nrCos-item.selectat;
+                    var val=localStorage.getItem("ProduseInCos");
+				    localStorage.removeItem("ProduseInCos"); 
+				    val=JSON.parse(val);
+                    for(var i of Object.values(val))
+							{	if(i.tag!=item.tag)
+								{
+									var aux=localStorage.getItem("ProduseInCos");
+									if(aux)
+									{
+										aux=JSON.parse(aux);
+										aux={... aux, [i.tag]:i}
+									}
+									else{
+										aux={[i.tag]:i}
+									}
+									localStorage.setItem("ProduseInCos",JSON.stringify(aux));
+								}
+							}
 				}
 				
 				});
