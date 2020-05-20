@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="resurse/CSS/footer.css">
 		<link rel="stylesheet" type="text/css" href="resurse/CSS/cos.css">
 		<script src="resurse/Javascript/cos.js"></script>
-				<script src="resurse/Javascript/order.js"></script>
+        <script src="resurse/Javascript/order.js"></script>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,16 +55,45 @@
 					</header>
 			</div>
 		</div>
+<div class="wrapper">
 <div class="container">
 		<div class="bara_prod">
+            
 			<h3 class="produs">PRODUS</h3>
 			<h3 class="pret">PRET</h3>
 			<h3 class="cantitate">CANTITATE</h3>
 			<h3 class="total">TOTAL</h3>
 		</div>
-		<div class="products">Cosul dumneavostra este gol.
-		</div>
+    <div class="products">Cosul dumneavostra este gol.</div>
 </div>
+<div class="formular">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Log in</button>
+            <button type="button" class="toggle-btn" onclick="signup()">Sign up</button>
+        </div>
+          <div class="social-icons">
+        <img src="resurse/Imagini/fb.png">
+        <img src="resurse/Imagini/tw.png">
+        <img src="resurse/Imagini/gp.png">
+    </div>
+        <form id="login" class="input-group">
+            <input type="text" class="input-field" placeholder="User Id" required>
+            <input type="text" class="input-field" placeholder="Password" required>
+            <input type="checkbox" class="check-box" ><span>Keep me logged</span>
+            <button type="submit" class="submit-btn">Log in</button>
+        </form>
+        <form id="register" class="input-group">
+            <input type="text" class="input-field" placeholder="User Id" required>
+            <input type="email" class="input-field" placeholder="E-mail" required>
+            <input type="text" class="input-field" placeholder="Password" required>
+            <input type="checkbox" class="check-box" ><span>I agree to the terms and conditions</span>
+            <button type="submit" class="submit-btn">Sign up</button>
+        </form>
+    </div>  
+</div>
+</div></div>
 	<footer>
 		<h2>Contact</h2>
 			<address id="contact">

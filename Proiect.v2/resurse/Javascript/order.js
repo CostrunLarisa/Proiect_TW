@@ -428,12 +428,17 @@ function comanda(){
 				var nume=document.createElement("span");
 				var cost=document.createElement("div");
 				var cantitate=document.createElement("div");
-				
+				var rand=document.createElement("div");
+                rand.classList="rand";
+                rand.style.borderBottom="2px solid";
 				cantitate.classList="cantitate";
 				cost.classList="pret";
 				cost.innerHTML=" "+item.pret+" lei";
 				cost.style.height="80px";
-				cost.style.width="6%";
+				cost.style.width="100px";
+                cost.style.paddingLeft="80px";
+                cost.style.paddingRight="0px"; 
+                cost.style.marginLeft="30px";
 				cantitate.style.height="80px";
 				var less=document.createElement("img");
 				var greater=document.createElement("img");
@@ -455,10 +460,11 @@ function comanda(){
 				nou.appendChild(nume);
 				cantitate.appendChild(txt);
 				cantitate.appendChild(greater);
-				cos.appendChild(nou);
-				cos.appendChild(cost);
-				cos.appendChild(cantitate);
-				cos.appendChild(total);
+				rand.appendChild(nou);
+				rand.appendChild(cost);
+			    rand.appendChild(cantitate);
+				rand.appendChild(total);
+                cos.appendChild(rand);
 				less.onclick=function(){
 					if(parseInt(item.selectat) > 0)
 					{valoare=valoare-parseInt(item.pret);
@@ -582,6 +588,21 @@ function comanda(){
 				{
 					var container=document.querySelector(".container");
 					var finalizare=document.createElement("button");
+                    var randNou=document.createElement("div");
+                    randNou.className="detaliiComanda";
+                    var txt=document.createElement("p");
+                    txt.innerHTML="Detalii comanda";
+                    randNou.appendChild(txt);
+                    /*var fomular=document.createElement("form");
+                    var rand=document.createElement("div");
+                    rand.className="rand";
+                    var titlu=document.createElement("label");
+                    titlu.innerHTML="Nume";
+                    formular.appendChild("titlu");
+                    formular.appendChild(rand);
+                    cotainer.appendChild(formular);*/
+                    logIn();
+                    container.appendChild(randNou);
 					finalizare.style.padding="10px";
 					finalizare.style.float="right";
 					finalizare.innerHTML+="Plaseaza comanda";
@@ -595,5 +616,9 @@ function comanda(){
 			
 	}
 	else if(cos && x==null){cos.innerHTML="Cosul dumneavoastra este gol.";}
+}
+
+function logIn(){
+    
 }
 }

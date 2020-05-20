@@ -33,12 +33,15 @@ input[type=submit]{
 	float:right;
 }
 .rand{
-	height:20px;
+	height:2px;
+    clear:both;
+    padding:0px;
 }
 .coloana2{
 	float:left;
-	width:70%;
+	width:60%;
 	margin-top:6px;
+    padding:0px;
 }
 	
 select{
@@ -47,8 +50,13 @@ select{
 label{
 	display:inline-block;
 	float:left;
-	width:15%;
+	width:20%;
 	margin-top:12px;
+    clear:both;
+    padding-top:5px;
+    padding-left:12px;
+    padding-right:100px;
+    
 }
 textarea{
 	resize:none;
@@ -59,4 +67,41 @@ textarea{
 	display:table;
 	clear:both;
 }
-	
+.formular{	
+
+    width:100%;
+    height:70rem;
+    background-image:linear-gradient(rgba(0,0,0,0.4));
+    background-image:url("../Imagini/book.jpg");
+    background-position:center;
+    background-size:cover;
+    position:aboslute;
+}
+.form-box{
+    width:70%;
+    height:55rem;
+    background-color:rgba(255,229,204,0.5);
+    padding:5px;
+    position:relative;
+    margin:6% auto;
+}
+@viewport{
+	width: 320px auto;
+}
+@-ms-viewport{
+	width:extend-to-zoom;
+	zoom: 1.0;
+}
+
+
+@media screen and (max-width:1063px){
+    .formular{	
+
+    width:100%;
+    height:90rem;
+    }
+    .form-box{
+        height:87rem;
+        }
+}
+
