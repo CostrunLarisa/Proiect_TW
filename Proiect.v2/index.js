@@ -26,6 +26,26 @@ app.get('/recipes', function(req, res) {
 	/*afiseaza(render) pagina folosind ejs (deoarece este setat ca view engine) */
     res.render('html/recipes');
 });
+app.get('/gallery', function(req, res) {
+	/*afiseaza(render) pagina folosind ejs (deoarece este setat ca view engine) */
+    res.render('html/gallery');
+});
+app.get('/menu', function(req, res) {
+	/*afiseaza(render) pagina folosind ejs (deoarece este setat ca view engine) */
+    res.render('html/menu');
+});
+app.get('/cos', function(req, res) {
+	/*afiseaza(render) pagina folosind ejs (deoarece este setat ca view engine) */
+    res.render('html/cos');
+});
+app.get('/book', function(req, res) {
+	/*afiseaza(render) pagina folosind ejs (deoarece este setat ca view engine) */
+    res.render('html/book');
+});
+app.get('/order', function(req, res) {
+	/*afiseaza(render) pagina folosind ejs (deoarece este setat ca view engine) */
+    res.render('html/order');
+});
 
 
 //fiind ultimul ajunge aici doar cand nu a gasit tratarea cererii mai sus
