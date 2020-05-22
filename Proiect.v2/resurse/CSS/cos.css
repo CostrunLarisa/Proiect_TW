@@ -242,4 +242,7 @@ margin-top:-77px;
     }
     .*/
   }
-
+@media screen and (max-width:769px){
+    .formular{
+        width:100%;
+    }
