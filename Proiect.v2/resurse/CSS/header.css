@@ -53,7 +53,8 @@ nav {	display:inline-flex;
 		line-height:20px;
 		height:10px;
 		top:20px;
-		
+		width:103%;
+        margin-left:-45px;
 	}
 	
 ul.menu{
@@ -113,6 +114,7 @@ ul.menu{
 		border-radius:30px;
 		padding:12px;
 		transition:background-color 1s;
+        padding-left:0px;
 	}
 	ul.menu>.cos a{
 	width:70px;
@@ -160,7 +162,7 @@ ul.menu{
 }
 @media screen and (min-width:320px) and (max-width:680px){
 .headerul{
-	height:718px;}
+	height:811px;}
 }
 
 @media screen and (min-width:842px) and (max-width:1316px){

@@ -1,4 +1,4 @@
-
+<div class="banner">
 				<div class="headerul">
                     <header>
 					<div class="sectiune">
@@ -8,12 +8,12 @@
 								<ul class="menu">
 										
 										
-											<li><a href="#sectiune11">Home</a>
+											<li><a href="/">Home</a>
 													<ul class="submenu">
-														<li><a href="#subsectiune1" >Ce este Meronne?</a></li>
-														<li><a href="#subsectiune2">Program</a></li>
-														<li><a href="#subsectiune3">Specific Italienesc</a></li>
-														<li><a href="#subsectiune4">Most wanted this month!</a></li>
+														<li><a href="/#subsectiune1" >Ce este Meronne?</a></li>
+														<li><a href="/#subsectiune2">Program</a></li>
+														<li><a href="/#subsectiune3">Specific Italienesc</a></li>
+														<li><a href="/#subsectiune4">Most wanted this month!</a></li>
 													</ul>
 										
 											</li>	
@@ -22,9 +22,18 @@
 											<li><a href="/gallery">Gallery</a></li>
 											<li><a href="/order"> Order online </a></li>
 											<li><a href="/book"> Book a table </a></li>
+                                             <% if(!locals.username) { %>
+                            <li><a href="/cos">Log in</a></li>
+
+                                    <% }
+                                        else { %>
+                                           
+                                            <li><a href="/logout">Logout- <%= locals.username %> </a></li>
+                                        <% } %>
 											<li class="cos">
 												<a href="/cos"><span>0</span><img class="shop" src="Imagini/shopping-cart-32.ico"></img>
 												</a>
+                            
 											</li>
 
 								</ul>
@@ -32,4 +41,4 @@
                 	</header>
 				</div>
 	
-				
+</div>

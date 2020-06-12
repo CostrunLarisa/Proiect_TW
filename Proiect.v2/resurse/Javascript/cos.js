@@ -13,6 +13,7 @@ function signup(){
     x.style.left="-400px";
     y.style.left="50px";
     z.style.left="110px";
-    y.style.top="200px"; 
+    y.style.top="-230px"; 
     y.style.height="77%";
 }
+

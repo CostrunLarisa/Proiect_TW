@@ -1,0 +1,83 @@
+{ "lastId": "pastabolognese" , "produs": [{
+		
+        "nume": "Pasta Bolognese",          
+		"tag": "pastabolognese",            
+		"pret": 30,                         
+		"selectat": 0,                       
+        "stoc": 1,                            
+        "about": "meniu_paste",
+        "dataInreg": "2019-05-27T20:40:48.637Z"
+	}
+	,
+	{
+		"nume": "Pasta Carbonara",
+		"tag": "pastacarbonara",
+		"pret": 29,
+		"selectat": 0,                       
+        "stoc": 1,                           
+        "about": "meniu_paste",
+        "dataInreg": "2019-05-27T20:40:48.637Z"
+	},
+	{
+		"nume": "Rigattoni",
+		"tag": "rigattoni",
+		"pret": 26,
+		"selectat": 0,                        
+        "stoc": 1,                             
+        "about": "meniu_paste",
+        "dataInreg": "2020-05-27T20:40:48.637Z"
+	},
+	{
+		"nume": "Chicken Pasta",
+		"tag": "chickenpasta",
+		"pret": 25,
+		"selectat": 0,                        
+        "stoc": 1,                             
+        "about": "meniu_paste",
+        "dataInreg": "2020-05-27T20:40:48.637Z"
+	},
+	{
+		"nume": "Penne Gorgonzola",
+		"tag": "pennegorgonzola",
+		"pret": 35,
+		"selectat": 0,                        
+        "stoc": 1,                             
+        "about": "meniu_paste",
+        "dataInreg": "2020-05-27T20:40:48.637Z"
+	},
+	{
+		"nume": "Spaghetti Amatriciana",
+		"tag": "spaghettiamatriciana",
+		"pret": 40,
+		"selectat": 0,                        
+        "stoc": 1,                             
+        "about": "meniu_paste",
+        "dataInreg": "2020-05-27T20:40:48.637Z"
+	},
+	{
+		"nume": "Pesto Pasta",
+		"tag": "pestopasta",
+		"pret": 38,
+		"selectat": 0,                        
+        "stoc": 0,                             
+        "about": "meniu_paste",
+        "dataInreg": "2020-06-27T20:40:48.637Z"
+	},
+	{
+		"nume": "Spaghetti Aglio",
+		"tag": "spaghettiaglio",
+		"pret": 45,
+		"selectat": 0,                        
+        "stoc": 1,                             
+        "about": "meniu_paste",
+        "dataInreg": "2020-06-27T20:40:48.637Z"
+	},
+	{
+		"nume": "Spaghetti",
+		"tag": "spaghetti",
+		"pret": 21,
+		"selectat": 0,                      
+        "stoc": 1,                             
+        "about": "meniu_paste",
+        "dataInreg": "2020-06-27T20:40:48.637Z"
+	}]}

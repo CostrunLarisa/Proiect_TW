@@ -26,6 +26,7 @@ nav {	display:inline-flex;
 		line-height:20px;
 		height:10px;
 		top:20px;
+    width:99%;
 	}
 	
 	ul.menu>li{
@@ -45,7 +46,7 @@ ul.menu{
 	}
 	ul.menu>li{
 	 float:left;		
-	 width:10vw;
+	 width:9vw;
 	 z-index:1;
 	}
 	ul.menu>li>ul.submenu>li{

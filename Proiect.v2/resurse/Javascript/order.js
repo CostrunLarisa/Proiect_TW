@@ -402,26 +402,44 @@ for(let i=0;i<produse.length;i++)
 	total(mancare[i]);} )
 }
 
-
+function calculeazaTotal(){
+    
+      var l=document.querySelector(".val span");
+                      var val=localStorage.getItem("ProduseInCos");
+    if(val)
+	{			    val=JSON.parse(val);
+                     var calc=0;
+                    for(var i of Object.values(val))
+                        {
+                            calc+=i.pret*i.selectat;
+                            
+                        }
+                     l.textContent="Valoarea comenzii: "+parseInt(calc)+" lei.";
+    }
+    else{
+         l.textContent="Valoarea comenzii: "+0+" lei.";
+    }
+}
 function comanda(){
 	var x=localStorage.getItem("ProduseInCos");
 	var cos=document.querySelector(".products");
 	if(x && cos){
 			x=JSON.parse(x);
 			cos.innerHTML="";
+            calculeazaTotal();
 			Object.values(x).map(item => {
 				var nou=document.createElement("DIV");
 				nou.classList="produs";
 				nou.style.height="140px";
 				nou.style.padding="0px";
 				var imagine=document.createElement("IMG");
-				imagine.src="../Proiect.v2/resurse/Imagini/cancel-24.ico";
-				imagine.style.width="1.7vw";
-				imagine.style.height="1.7vw";
+				imagine.src="Imagini/cancel-24.ico";
+				imagine.style.width="20px";
+				imagine.style.height="20px";
 				imagine.style.cursor="pointer";
 				nou.appendChild(imagine);
 				var imagine2=document.createElement("IMG");
-				imagine2.src="../Proiect.v2/resurse/Imagini/"+item.tag+".jpg";
+				imagine2.src="Imagini/"+item.tag+".jpg";
 				imagine2.style.width="150px";
 				
 				nou.appendChild(imagine2);
@@ -434,17 +452,17 @@ function comanda(){
 				cantitate.classList="cantitate";
 				cost.classList="pret";
 				cost.innerHTML=" "+item.pret+" lei";
-				cost.style.height="80px";
+				/*cost.style.height="80px";
 				cost.style.width="100px";
                 cost.style.paddingLeft="80px";
                 cost.style.paddingRight="0px"; 
-                cost.style.marginLeft="30px";
+                cost.style.marginLeft="30px";*/
 				cantitate.style.height="80px";
 				var less=document.createElement("img");
 				var greater=document.createElement("img");
-				less.src="../Proiect.v2/resurse/Imagini/icons8-less-than-25.png";
+				less.src="Imagini/icons8-less-than-25.png";
 				less.style.width="24px";
-				greater.src="../Proiect.v2/resurse/Imagini/icons8-greater-than-25.png";
+				greater.src="Imagini/icons8-greater-than-25.png";
 				less.style.cursor="pointer";
 				greater.style.cursor="pointer";
 				cantitate.appendChild(less);
@@ -482,6 +500,8 @@ function comanda(){
 						let pret=localStorage.getItem("total");
 						pret=parseInt(pret);
 						localStorage.setItem("total",pret-item.pret);
+                        calculeazaTotal();
+                     
 					}
 					if(parseInt(item.selectat) == 0)
 					{
@@ -522,7 +542,7 @@ function comanda(){
 						localStorage.removeItem("ProduseInCos");
 						}
 					}
-						
+				     calculeazaTotal();
 				}
 				greater.onclick=function(){
 						valoare=valoare+parseInt(item.pret);
@@ -540,6 +560,7 @@ function comanda(){
 						let pret=localStorage.getItem("total");
 						pret=parseInt(pret);
 						localStorage.setItem("total",pret+item.pret);
+                        calculeazaTotal();
 					}
 				var nrCos=localStorage.getItem("numarItem");
 				nrCos=parseInt(nrCos);
@@ -579,6 +600,7 @@ function comanda(){
 									localStorage.setItem("ProduseInCos",JSON.stringify(aux));
 								}
 							}
+                     calculeazaTotal();
 				}
 				
 				});
@@ -588,11 +610,6 @@ function comanda(){
 				{
 					var container=document.querySelector(".container");
 					var finalizare=document.createElement("button");
-                    var randNou=document.createElement("div");
-                    randNou.className="detaliiComanda";
-                    var txt=document.createElement("p");
-                    txt.innerHTML="Detalii comanda";
-                    randNou.appendChild(txt);
                     /*var fomular=document.createElement("form");
                     var rand=document.createElement("div");
                     rand.className="rand";
@@ -602,7 +619,6 @@ function comanda(){
                     formular.appendChild(rand);
                     cotainer.appendChild(formular);*/
                     logIn();
-                    container.appendChild(randNou);
 					finalizare.style.padding="10px";
 					finalizare.style.float="right";
 					finalizare.innerHTML+="Plaseaza comanda";

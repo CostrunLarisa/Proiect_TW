@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href=" CSS/footer.css">
 		<link rel="stylesheet" type="text/css" href=" CSS/books.css">
 		<script src=" Javascript/book.js"></script>
+		<script src=" Javascript/order.js"></script>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,45 +23,13 @@
 		</style>
 	</head>
 	<body>
-		<div class="banner">
-			<div class="headerul">
-					<header>
-					<div class="sectiune">
-							<h1> Meronne </h1>
-							<aside class="subtitlu"> The little Italy on your taste buds since <time datetime="2015-06-01"> 01.06.2015.</time></aside></div>
-						<nav class="wrapper">
-								<ul class="menu">
-										<li><a href="/">Home</a>
-													<ul class="submenu">
-														<li><a href="/#subsectiune1" >Ce este Meronne?</a></li>
-														<li><a href="/#subsectiune2">Program</a></li>
-														<li><a href="/#subsectiune3">Specific Italienesc</a></li>
-														<li><a href="/#subsectiune4">Most wanted this month!</a></li>
-													</ul>
-										
-											</li>	
-											<li><a href="/recipes"> Recipes </a></li>
-											<li><a href="/menu"> Menu </a></li>
-											<li><a href="/gallery">Gallery</a></li>
-											<li><a href="/order"> Order online </a></li>
-											<li><a href="/book"> Book a table </a></li>
-											<li class="cos">
-												<a href="/cos"><span>0</span><img class="shop" src="Imagini/shopping-cart-32.ico"></img>
-												</a>
-											</li>
-
-								</ul>
-						</nav>
-				
-					</header>
-			</div>
-		</div>
+		 <%-include("../fragmente/header.ejs")%>
 <div class="continut">
 		<h1>Book a table at Meronne!</h1>
 		<aside><b>Rezervarile se efectueaza incepand cu ora 08:00.<b></aside>
 <div class="formular">
     <div class="form-box">
-        <form action="action_page.php">
+        <form method="post" action="/rezerva" id="rezerva">
 			<div class="rand">
 				
 					<label for="nume"><b>Nume</b></label>
@@ -81,7 +50,7 @@
 						<label for="email"><b>E-mail</b></label>
 					
 					<div class="coloana2">
-						<input type="text" placeholder="Introduceti email-ul" name ="email" required>			
+						<input type="email" placeholder="Introduceti email-ul" name ="email" required>			
 					</div>
 			</div>
 			<div class="rand">
@@ -94,10 +63,11 @@
 			</div>
 			<div class="rand">
 		
-					<label for="data"><b>Selecteaza data</b></label>
+					<label for="data" ><b>Selecteaza data</b></label>
 			
 				<div class="coloana2">
-					<select id="data" name="data">
+					<select id="data" name="data" >
+                       <script>genereaza()</script>
 					</select>
 				</div>
 			</div>
@@ -106,15 +76,15 @@
 					<label for="persoana"><b>Nr. de persoane</b></label>
 			
 				<div class="coloana2">
-					<select id="data" name="data">
-					<option value="">Masa de o persoana</option>
-					<option value="">Mase de 2 persoane</option>
-					<option value="">Masa de 4 persoane</option>
-					<option value="">Masa de 6 persoane</option>
-					<option value="">Masa de 8 persoane</option>
-					<option value="">Masa de 10-12 persoane</option>
-					<option value="">Masa de 14-18 persoane</option>
-					<option value="">Masa de 20-30 persoane</option>
+					<select id="mese" name="persoane">
+					<option value="1">Masa de o persoana</option>
+					<option value="2">Mase de 2 persoane</option>
+					<option value="4">Masa de 4 persoane</option>
+					<option value="6">Masa de 6 persoane</option>
+					<option value="8">Masa de 8 persoane</option>
+					<option value="12">Masa de 10-12 persoane</option>
+					<option value="18">Masa de 14-18 persoane</option>
+					<option value="30">Masa de 20-30 persoane</option>
 					</select>
 				</div>
 			</div>
@@ -124,67 +94,77 @@
 		
 				<div class="coloana2">
 				<select id="ora" name="ora">
-					<option value="">08:00</option>
-					<option value="">08:15</option>
-					<option value="">08:30</option>
-					<option value="">08:45</option>
-					<option value="">09:00</option>
-					<option value="">09:15</option>
-					<option value="">09:30</option>
-					<option value="">09:45</option>
-					<option value="">10:00</option>
-					<option value="">10:15</option>
-					<option value="">10:30</option>
-					<option value="">10:45</option>
-					<option value="">11:00</option>
-					<option value="">11:15</option>
-					<option value="">11:30</option>
-					<option value="">11:45</option>
-					<option value="">12:00</option>
-					<option value="">12:15</option>
-					<option value="">12:30</option>
-					<option value="">12:45</option>
-					<option value="">13:00</option>
-					<option value="">13:15</option>
-					<option value="">13:30</option>
-					<option value="">13:45</option>
-					<option value="">14:00</option>
-					<option value="">14:15</option>
-					<option value="">14:30</option>
-					<option value="">14:45</option>
-					<option value="">15:00</option>
-					<option value="">15:15</option>
-					<option value="">15:30</option>
-					<option value="">15:45</option>
-					<option value="">16:00</option>
-					<option value="">16:15</option>
-					<option value="">16:30</option>
-					<option value="">16:45</option>
-					<option value="">17:00</option>
-					<option value="">17:15</option>
-					<option value="">17:30</option>
-					<option value="">17:45</option>	
-					<option value="">18:00</option>
-					<option value="">18:15</option>
-					<option value="">18:30</option>
-					<option value="">18:45</option>
-					<option value="">19:00</option>
-					<option value="">19:15</option>
-					<option value="">19:30</option>
-					<option value="">19:45</option>
-					<option value="">20:00</option>
-					<option value="">20:15</option>
-					<option value="">20:30</option>
-					<option value="">20:45</option>
-					<option value="">21:00</option>
-					<option value="">21:15</option>
-					<option value="">21:30</option>
-					<option value="">21:45</option>
-					<option value="">22:00</option>
-					<option value="">22:15</option>
-					<option value="">22:30</option>
-					<option value="">22:45</option>
+					<option value="08:00">08:00</option>
+					<option value="08:15">08:15</option>
+					<option value="08:30<">08:30</option>
+					<option value="08:45">08:45</option>
+					<option value="09:00">09:00</option>
+					<option value="09:15">09:15</option>
+					<option value="09:30">09:30</option>
+					<option value="09:45">09:45</option>
+					<option value="10:00">10:00</option>
+					<option value="10:15">10:15</option>
+					<option value="10:30">10:30</option>
+					<option value="10:45">10:45</option>
+					<option value="11:00">11:00</option>
+					<option value="11:15">11:15</option>
+					<option value="11:30">11:30</option>
+					<option value="11:45">11:45</option>
+					<option value="12:00">12:00</option>
+					<option value="12:15">12:15</option>
+					<option value="12:30">12:30</option>
+					<option value="12:45">12:45</option>
+					<option value="13:00">13:00</option>
+					<option value="13:15">13:15</option>
+					<option value="13:30">13:30</option>
+					<option value="13:45">13:45</option>
+					<option value="14:00">14:00</option>
+					<option value="14:15">14:15</option>
+					<option value="14:30">14:30</option>
+					<option value="14:45">14:45</option>
+					<option value="15:00">15:00</option>
+					<option value="15:15">15:15</option>
+					<option value="15:30">15:30</option>
+					<option value="15:45">15:45</option>
+					<option value="16:00">16:00</option>
+					<option value="16:15">16:15</option>
+					<option value="16:30">16:30</option>
+					<option value="16:45">16:45</option>
+					<option value="17:00">17:00</option>
+					<option value="17:15">17:15</option>
+					<option value="17:30">17:30</option>
+					<option value="17:45">17:45</option>	
+					<option value="18:00">18:00</option>
+					<option value="18:15">18:15</option>
+					<option value="18:30">18:30</option>
+					<option value="18:45">18:45</option>
+					<option value="19:00">19:00</option>
+					<option value="19:15">19:15</option>
+					<option value="19:30">19:30</option>
+					<option value="19:45">19:45</option>
+					<option value="20:00">20:00</option>
+					<option value="20:15">20:15</option>
+					<option value="20:30">20:30</option>
+					<option value="20:45">20:45</option>
+					<option value="21:00">21:00</option>
+					<option value="21:15">21:15</option>
+					<option value="21:30">21:30</option>
+					<option value="21:45">21:45</option>
+					<option value="22:00">22:00</option>
+					<option value="22:15">22:15</option>
+					<option value="22:30">22:30</option>
+					<option value="22:45">22:45</option>
 				</select>
+				</div>
+			</div>
+             <div class="rand">
+				
+					<label for="client" ><b>Ati mai vizitat restaurantul nostru?</b></label>
+				
+				<div class="coloana2">
+                    <span>Da</span>
+					 <input type="radio" id="vizitat" name="client" value="da" required><span>Nu</span>
+					 <input type="radio" id="nevizitat" name="client" value="nu" required>
 				</div>
 			</div>
 			<div class="rand">
@@ -192,7 +172,7 @@
 					<label for="detalii"><b>Specificatii/preferinte</b></label>
 		
 				<div class="coloana2">
-					<textarea id="subiect" name="subiect" placeholder="Comunica preferinte..." maxlength="500" onkeyup="numara(this)"></textarea>
+					<textarea id="subiect" name="specificatii" placeholder="Comunica preferinte..." maxlength="500" onkeyup="numara(this)"></textarea>
 					<div id="the-count">
 						<span id="current">0</span>
 						<span id="max">/500</span
@@ -200,7 +180,7 @@
 				</div>
 			</div>
 			<div class="rand">
-				<input type ="submit" value="Rezerva">
+                <button type ="submit" >Rezerva</button>
 			</div>
 			</form>
     </div>
