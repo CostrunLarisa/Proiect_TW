@@ -1,4 +1,4 @@
-window.onload=function(){
+function cerere(){
 	//creez un obiect de tip XMLHttpRequest cu care pot transmite cereri catre server
 	var ajaxRequest = new XMLHttpRequest();
 

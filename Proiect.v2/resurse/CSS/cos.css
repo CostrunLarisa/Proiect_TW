@@ -31,7 +31,7 @@ span#hide >a:hover{
      padding:10px 30px;
     cursor:pointer;
 }
-.container{
+.container,.container2{
 	justify-content:space-around;
 	align-content:center;
 	position:relative;
@@ -65,7 +65,7 @@ span#hide >a:hover{
 .bara_prod class{
 	align-items:center;
 }
-.container{
+.container,.container2{
 	box-sizing:border-box;
 	clear:both;
 }
