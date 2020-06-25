@@ -31,19 +31,27 @@
 <div class="calendar disable-selection" id="calendar">
     <div class="left-side">
         <div class="current day text-center">
-            <h1 class="calendar-lef-side-day">1</h1>
-            <div class="calendar-left-side-day-of-week">Friday</div>
+            <h1 class="calendar-left-side-day"></h1>
+            <div class="calendar-left-side-day-of-week"></div>
         </div>
         <div class="current-day-events">
             <div>Evenimente curente:</div>
-            <ul class="current-day-events-list">
-                <li></li>
-            </ul>
+            <div class="current-day-events-list afisEve">
+                
+            </div>
         </div>
-    <div class="add-event-day">
-        <input type="text" class="add-event-day-field" placeholder="Adauga eveniment.">
-        <span class=" fa fa-plus-circle cursor-pointer add-event-day-field-btn"></span>
-     </div>
+    <form method="post" action="/add-event-day" class="add-event-day" >
+        <input type="text" name="nume" class="add-event-day-field" placeholder="Adauga eveniment." required>
+        <input type="text" name="descriere" class="add-event-day-field" placeholder="Descriere" required>
+        <input type="text" name="ora" class="add-event-day-field" placeholder="Ora" required>
+        <select name="data" class="add-event-day-field" id="data"></select>
+        <select name="prioritate" class="add-event-day-field optiuni" placeholder="Prioritate" required>
+            <option value="rosu">Foarte ridicata</option>
+            <option value="verde">Ridicata</option>
+            <option value="galben">Medie</option>
+        </select>
+        <button type="submit" class=" fa fa-plus-circle cursor-pointer add-event-day-field-btn"></button>
+        </form>
     </div>
     <div class="right-side">
         <div class="text-right calendar-change-year">
@@ -66,7 +74,7 @@
             </ul>
         </div>
         <div class="calendar-days-list">
-            <ul class="calendar-days">
+            <ul class="calendar-days" onclick="adaugaEve()">
             <li data-day="01"></li>
             <li data-day="02"></li>
             <li data-day="03"></li>
@@ -101,7 +109,7 @@
         </div>
 </div>
 </div>
-<script src=" Javascript/cerereCalendar.js"></script>
+
 <div class="continut">
 		<h1>Book a table at Meronne!</h1>
 		<aside><b>Rezervarile se efectueaza incepand cu ora 08:00.<b></aside>
@@ -267,6 +275,7 @@
 </div>
             </div></div>
     </div>
+<script src=" Javascript/cerereCalendar.js"></script>
 <footer>
 		<h2>Contact</h2>
 			<address id="contact">

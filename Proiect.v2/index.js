@@ -114,6 +114,52 @@ app.post('/login', function(req, res) {
 	})
 })
 
+app.post('/add-event-day', function(req, res) {
+    
+  var formular= new formidable.IncomingForm()
+  formular.parse(req, function(err, fields, files){
+		//files provine din inputurile de tip file <input type="file"....
+		//fields sunt toate celelalte
+		//in fields proprietatile sunt valorile atributelor name din inputurile din formular
+		// <input type="text" name="username" 
+	
+		fisierUseri=fs.readFileSync("resurse/json/evenimente.json");
+		obUseri= JSON.parse(fisierUseri);
+       obUseri.lastId++;
+		var userNou= {
+        id: obUseri.lastId,
+        nume: fields.nume,
+        dataInreg: new Date(),
+        prioritate: fields.prioritate,
+        ora: fields.ora,
+        descriere: fields.descriere,
+        data: fields.data
+			}
+        if(req.session.utilizator)
+           { if(req.session.utilizator.rol=="admin")
+            {
+            obUseri.eve.push(userNou);
+            var jsonNou=JSON.stringify(obUseri);
+            fs.writeFileSync("resurse/json/evenimente.json",jsonNou );
+              res.redirect("/book");
+            }
+            else{
+                obUseri.lastId--;
+            console.log("Doar adminii pot adauga evenimente.");
+            res.redirect("/book");
+            }
+           }
+        else{
+            console.log("Doar adminii pot adauga evenimente.");
+            res.redirect("/book")
+        }
+	
+
+	})
+		
+		
+})
+
 
 
 // ------------ tratare cereri get -------

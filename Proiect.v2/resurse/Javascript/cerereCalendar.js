@@ -1,3 +1,4 @@
+
 const AVAILABLE_WEEK_DAYS = ['Duminica', 'Luni', 'Marti', 'Miercuri', 'Joi', 'Vineri', 'Sambata'];
 const localStorageName = 'calendar-events';
 
@@ -28,8 +29,9 @@ class CALENDAR {
 // App methods
     init() {
         if (!this.options.id) return false;
-        this.eventsTrigger();
+        
         this.drawAll();
+        this.eventsTrigger();
     }
 
     // draw Methods
@@ -45,14 +47,68 @@ class CALENDAR {
     drawEvents() {
         let calendar = this.getCalendar();
         let eventList = this.eventList[calendar.active.formatted] || ['There is not any events'];
-        let eventTemplate = "";
-        eventList.forEach(item => {
-            var nou=document.createElement('li');
-            nou.innerHTML+=item;
-            eventTemplate += nou;
+        /*let eventTemplate = "";
+        fisierUseri=fs.readFileSync("resurse/json/evenimente.json");
+		obUseri= JSON.parse(fisierUseri);
+        var utiliz= obUseri.useri.find(function() {
+            return calendar.active.formatted == fields.data;
         });
+        if(utiliz)
+            {
+                var nou=document.createElement('li');
+            nou.innerHTML+=utiliz.nume+" "+utiliz.descriere+" "+utiliz.ora+""+utiliz.prioritate;
+            eventTemplate += nou;
+            }
+        this.elements.eventList.innerHTML = eventTemplate;*/
+        /*cerere();
+    function cerere(){
+	//creez un obiect de tip XMLHttpRequest cu care pot transmite cereri catre server
+	var ajaxRequest = new XMLHttpRequest();
 
-        this.elements.eventList.innerHTML = eventTemplate;
+
+	//la schimbarea starii obiectului XMLHttpRequest (la schimbarea proprietatii readyState)
+	/* stari posibile:
+	0 - netrimis
+	1 - conexiune deschisa
+	2 - s-au transmis headerele
+	3 - se downleadeaza datele (datele sunt impartite in pachete si el primeste cate un astfel de pachet)
+	4 - a terminat
+	
+	ajaxRequest.onreadystatechange = function() {
+			//daca am primit raspunsul (readyState==4) cu succes (codul status este 200)
+			if (this.readyState == 4 && this.status == 200) {
+					//in proprietatea responseText am contintul fiserului JSON
+					var obJson = JSON.parse(this.responseText);
+					afiseajaJsonTemplate(obJson);
+			}
+	};
+	//deschid o conexiune cu o cerere de tip get catre server
+	ajaxRequest.open("GET", "/json/evenimente.json", true);
+	//trimit catre server cererea
+	ajaxRequest.send();
+
+	function afiseajaJsonTemplate(obJson) { 
+			//in acets div voi afisa template-urile   
+			let container=document.getElementById("afisEve");
+
+			//in textTemplate creez continutul (ce va deveni innerHTML-ul) divului "afisTemplate"
+			let textTemplate ="";
+        
+			//parcurg vetorul de studenti din obJson
+			for(let i=0;i<obJson.eve.length;i++){
+				//creez un template ejs (primul parametru al lui ejs.render)
+                if(eve.data==calendar.active.formatted)
+                {textTemplate+="<div >\
+				
+				<p>Data Inregistrare : <%= eve.dataInreg %> </p>\
+				</div>";
+                else {
+                    break;
+                }
+			} 
+			//adaug textul cu afisarea studentilor in container
+			container.appendChild(textTemplate);
+	}*/
     }
 
     drawYearAndCurrentDay() {
@@ -169,20 +225,33 @@ class CALENDAR {
             if (!day) return false;
             let strDate = `${Number(month) + 1}/${day}/${year}`;
             this.updateTime(strDate);
-            this.drawAll()
-        });
-
-
-        this.elements.eventAddBtn.addEventListener('click', e => {
+            this.drawAll();
+            this.elements.eventAddBtn.addEventListener('click', e => {
             let fieldValue = this.elements.eventField.value;
+            document.querySelectorAll(`[data-day='${day}']`)[0].style.background="#d3152f";
+            var introduce=document.querySelector("select#data.add-event-day-field");
+            introduce.option=strDate;
             if (!fieldValue) return false;
             let dateFormatted = this.getFormattedDate(new Date(this.date));
             if (!this.eventList[dateFormatted]) this.eventList[dateFormatted] = [];
             this.eventList[dateFormatted].push(fieldValue);
             localStorage.setItem(localStorageName, JSON.stringify(this.eventList));
-            this.elements.eventField.value = '';
-            this.drawAll()
+            
+        })
         });
+
+
+      /*this.elements.eventAddBtn.addEventListener('click', e => {
+            let fieldValue = this.elements.eventField.value;
+          var cev=document.querySelectorAll(".selected-day:after");
+            cev[0].style.backgroundColor="#d3152f";
+            if (!fieldValue) return false;
+            let dateFormatted = this.getFormattedDate(new Date(this.date));
+            if (!this.eventList[dateFormatted]) this.eventList[dateFormatted] = [];
+            this.eventList[dateFormatted].push(fieldValue);
+            localStorage.setItem(localStorageName, JSON.stringify(this.eventList));
+            
+        });*/
 
 
     }
@@ -232,6 +301,7 @@ class CALENDAR {
     }
 
     getFormattedDate(date) {
+    
         return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
     }
 
@@ -239,14 +309,19 @@ class CALENDAR {
         return new Array(number).fill().map((e, i) => i);
     }
  getFirstElementInsideIdByClassName(className) {
-        return document.getElementById(""+this.options.id).getElementsByClassName(""+className)[0];
+        return document.getElementById(this.options.id).getElementsByClassName(className)[0];
     }
-   
+
 }
 
-
+   function adaugaEve(){
+    var loc=document.querySelector(".add-event-day");
+    loc.style.left="0px";
+    loc.style.float="none";
+}
 (function () {
     new CALENDAR({
         id: "calendar"
     })
 })();
+
