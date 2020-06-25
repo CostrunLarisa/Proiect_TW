@@ -1,6 +1,7 @@
+
 window.onload=function(){
-    cerere();
-    function cerere(){
+
+    function afiseazaAjax(obiect){
 	//creez un obiect de tip XMLHttpRequest cu care pot transmite cereri catre server
 	var ajaxRequest = new XMLHttpRequest();
 
@@ -16,39 +17,37 @@ window.onload=function(){
 	ajaxRequest.onreadystatechange = function() {
 			//daca am primit raspunsul (readyState==4) cu succes (codul status este 200)
 			if (this.readyState == 4 && this.status == 200) {
+                console.log("ceva");
+                	
 					//in proprietatea responseText am contintul fiserului JSON
-					document.getElementById("afisJson").innerHTML=this.responseText;
 					var obJson = JSON.parse(this.responseText);
 					afiseajaJsonTemplate(obJson);
 			}
 	};
 	//deschid o conexiune cu o cerere de tip get catre server
-	ajaxRequest.open("GET", "/json/produs.json", true);
+	ajaxRequest.open("GET", "/json/evenimente.json", true);
 	//trimit catre server cererea
 	ajaxRequest.send();
 
 	function afiseajaJsonTemplate(obJson) { 
 			//in acets div voi afisa template-urile   
-			let container=document.getElementById("afisTemplate");
+			let container=document.getElementById("afisEve");
 
 			//in textTemplate creez continutul (ce va deveni innerHTML-ul) divului "afisTemplate"
-			let textTemplate ="";
+			var textTemplate ="";
 			//parcurg vetorul de studenti din obJson
-			for(let i=0;i<obJson.produs.length;i++){
-				//creez un template ejs (primul parametru al lui ejs.render)
-				textTemplate+=(ejs.render("<div class='templ_student'>\
-				<p>Id: <%= produs.tag %></p>\
-				<p>Pret: <%= produs.pret %></p>\
-				<p>Nume : <%= produs.nume %> </p>\
-				<p>Selectat : <%= produs.selectat %> </p>\
-				<p>Stoc : <%= produs.stoc %> </p>\
-				<p>Despre : <%= produs.about %> </p>\
-				<p>Data Inregistrare : <%= produs.dataInreg %> </p>\
+			for(let i=0;i<obJson.eve.length;i++){
+                console.log(obiect);
+                if(obiect==obJson.eve[i].data)
+                {textTemplate+=(ejs.render("<div class='templ_student'>\
+			     <p>Nume : <%= eve.id%> </p>\
+				<p>Despre : <%= eve.descriere %> </p>\
+				<p>Data Inregistrare : <%= eve.dataInreg %> </p>\
 				</div>",                    
-				{produs: obJson.produs[i]}));
-			} 
+				{eve: obJson.eve[i]}));}
+                break;
+            }
 			//adaug textul cu afisarea studentilor in container
 			container.innerHTML=textTemplate;
 	}
-}
-}
+}}

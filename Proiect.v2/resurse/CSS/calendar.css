@@ -157,7 +157,6 @@ padding-right:0px;}
       line-height: 40px;
       color: #959595; }
   #calendar .calendar-days .event-day:after {
-      background-color: #d9387b;
       color:white;
       border-radius:50%;
 }
@@ -221,4 +220,7 @@ margin-top:-30px;}
 }
 #calendar .add-event-day .optiuni{
     height:50px;
+}
+#afisEve{
+    color:black;
 }

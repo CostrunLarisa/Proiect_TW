@@ -8,7 +8,9 @@
         <link rel="stylesheet" type="text/css" href=" CSS/calendar.css">
 		<script src=" Javascript/book.js"></script>
 		<script src=" Javascript/order.js"></script>
+		<script src=" Javascript/scriptAjax.js"></script>
 
+        <script src=" Javascript/scriptAjax.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -36,8 +38,7 @@
         </div>
         <div class="current-day-events">
             <div>Evenimente curente:</div>
-            <div class="current-day-events-list afisEve">
-                
+            <div class="current-day-events-list" id="afisEve">
             </div>
         </div>
     <form method="post" action="/add-event-day" class="add-event-day" >
@@ -45,7 +46,7 @@
         <input type="text" name="descriere" class="add-event-day-field" placeholder="Descriere" required>
         <input type="text" name="ora" class="add-event-day-field" placeholder="Ora" required>
         <select name="data" class="add-event-day-field" id="data"></select>
-        <select name="prioritate" class="add-event-day-field optiuni" placeholder="Prioritate" required>
+        <select name="prioritate" class="add-event-day-field " id="optiunile" placeholder="Prioritate" required>
             <option value="rosu">Foarte ridicata</option>
             <option value="verde">Ridicata</option>
             <option value="galben">Medie</option>
@@ -74,7 +75,7 @@
             </ul>
         </div>
         <div class="calendar-days-list">
-            <ul class="calendar-days" onclick="adaugaEve()">
+            <ul class="calendar-days" >
             <li data-day="01"></li>
             <li data-day="02"></li>
             <li data-day="03"></li>
@@ -262,7 +263,7 @@
 					<textarea id="subiect" name="specificatii" placeholder="Comunica preferinte..." maxlength="500" onkeyup="numara(this)"></textarea>
 					<div id="the-count">
 						<span id="current">0</span>
-						<span id="max">/500</span
+                        <span id="max">/500</span>
 					</div>
 				</div>
 			</div>
@@ -276,6 +277,7 @@
             </div></div>
     </div>
 <script src=" Javascript/cerereCalendar.js"></script>
+
 <footer>
 		<h2>Contact</h2>
 			<address id="contact">
