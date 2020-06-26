@@ -1,10 +1,17 @@
 
 const AVAILABLE_WEEK_DAYS = ['Duminica', 'Luni', 'Marti', 'Miercuri', 'Joi', 'Vineri', 'Sambata'];
+const CULORI=['Ridicat','Mediu','Foarte ridicat'];
 const localStorageName = 'calendar-events';
 function afiseazaCamp(){
       var loc=document.querySelectorAll("#calendar .left-side .add-event-day");
             loc[0].style.left="0px";
             loc[0].style.float="none";
+}
+function afiseazaCampInitial()
+{
+    var loc=document.querySelectorAll("#calendar .left-side .add-event-day");
+            loc[0].style.left="-109%";
+            loc[0].style.float="left";
 }
 function afiseazaAjax(obiect){
 	//creez un obiect de tip XMLHttpRequest cu care pot transmite cereri catre server
@@ -44,15 +51,13 @@ function afiseazaAjax(obiect){
 			for(let i=0;i<obJson.eve.length;i++){
                 console.log(obiect);
                 if(obiect==obJson.eve[i].data)
-                {textTemplate+="<div class='templ_student'>\
-			     <p>Nume : <%= eve.id%> </p>\
-				<p>Despre : <%= eve.descriere %> </p>\
-				<p>Data Inregistrare : <%= eve.dataInreg %> </p>\
-				</div>";
-                break;}
+                {
+                textTemplate+="Nume :"+ obJson.eve[i].nume+" Despre : "+obJson.eve[i].descriere+"  Ora : "+ obJson.eve[i].ora + "Prioritate:"+obJson.eve[i].prioritate;
+			     container.innerHTML=textTemplate;
+              }
             }
 			//adaug textul cu afisarea studentilor in container
-			container.innerHTML=textTemplate;
+			
 	}
 }
 class CALENDAR {
@@ -84,8 +89,81 @@ class CALENDAR {
         
         this.drawAll();
         this.eventsTrigger();
+        this.afiseazaTot();
     }
-
+    afiseazaTot(){
+       
+        var ceva = JSON.parse(localStorage.getItem(localStorageName));
+       Object.values(ceva).map(item => {
+           if(item[0].slice(1,2)=="/")
+               {
+                   var day=item[0].slice(0,1);
+               console.log(item[0]);
+                   if(item[0].slice(4,5)=="/"){
+                    var month=item[0].slice(2,4);
+                   var year=item[0].slice(5,9);
+                   }
+                    else{
+                        var month=item[0].slice(2,3);
+                   var year=item[0].slice(4,9);
+                    }
+               }
+           else{
+                if(item[0].slice(5,6)=="/"){
+                    var day=item[0].slice(0,2);
+                    var month=item[0].slice(3,5);
+                   var year=item[0].slice(6,10);
+                   }
+              else{ var day=item[0].slice(0,2);
+           console.log(item[0]);
+                var month=item[0].slice(3,4);
+               var year=item[0].slice(5,9);
+                  }
+           }
+            
+            console.log(month);
+           console.log(year);
+                var c=document.querySelectorAll(".calendar-days-list .calendar-days>li");
+           if(item[1]=="Ridicata")
+               {
+                for(var i=0;i<c.length;i++)
+                    {
+                        if(c[i].getAttribute('data-day')==day && c[i].getAttribute('data-month')==month && c[i].getAttribute('data-year')==year )
+                            {
+                                c[i].style.backgroundColor="green";
+                                c[i].style.borderRadius="50px";
+            
+                                break;
+                            }
+                    }
+               }   
+           if(item[1]=="Foarte ridicata")
+               {
+                   for(var i=0;i<c.length;i++)
+                    {
+                        if(c[i].getAttribute('data-day')==day && c[i].getAttribute('data-month')==month && c[i].getAttribute('data-year')==year )
+                            {
+                                c[i].style.backgroundColor="red"
+                                c[i].style.borderRadius="50px";
+                                break;
+                            }
+                    }
+               }
+           if(item[1]=="Medie")
+               {
+                   for(var i=0;i<c.length;i++)
+                    {
+                        if(c[i].getAttribute('data-day')== day&& c[i].getAttribute('data-month')==month && c[i].getAttribute('data-year')==year )
+                            {
+                                c[i].style.backgroundColor="yellow";
+                                c[i].style.borderRadius="50px";
+                                break;
+                            }
+                    }
+               }
+           
+       })
+    }
     // draw Methods
     drawAll() {
         this.drawWeekDays();
@@ -148,6 +226,12 @@ class CALENDAR {
             newDayParams.hasEvent = this.eventList[formatted];
             return newDayParams;
         });
+           days = days.map(day => {
+            let newd= day;
+            let formatted = this.getFormattedDate(new Date(`${Number(day.month) + 1}/${day.dayNumber}/${day.year}`));
+            newd.hasField = this.eventField;
+            return newd;
+        });
 
         let daysTemplate = "";
         days.forEach(day => {
@@ -182,15 +266,18 @@ class CALENDAR {
         this.elements.prevYear.addEventListener('click', e => {
             let calendar = this.getCalendar();
             this.updateTime(calendar.pYear);
-            this.drawAll()
+            this.drawAll();
+            this.afiseazaTot()
         });
 
         this.elements.nextYear.addEventListener('click', e => {
             let calendar = this.getCalendar();
             this.updateTime(calendar.nYear);
-            this.drawAll()
+            this.drawAll();
+            this.afiseazaTot()
         });
 
+       
         this.elements.month.addEventListener('click', e => {
             let calendar = this.getCalendar();
             let month = e.srcElement.getAttribute('data-month');
@@ -198,11 +285,14 @@ class CALENDAR {
 
             let newMonth = new Date(calendar.active.tm).setMonth(month);
             this.updateTime(newMonth);
-            this.drawAll()
+            this.drawAll();
+            this.afiseazaTot()
         });
 
 
         this.elements.days.addEventListener('click', e => {
+            let container=document.getElementById("afisEve");
+            container.innerHTML="";
             let element = e.srcElement;
             let day = element.getAttribute('data-day');
             let month = element.getAttribute('data-month');
@@ -214,26 +304,49 @@ class CALENDAR {
             var variabila=`${day}/${Number(month) + 1}/${year}`;
             this.updateTime(strDate);
             this.drawAll();
+            this.afiseazaTot();
             if(element.className==" event-day")
                    {
                         afiseazaAjax(variabila);
+                        afiseazaCampInitial();
                    }
             else{
+            let container=document.getElementById("afisEve");
+            container.innerHTML="";
             afiseazaCamp();
-            this.elements.eventAddBtn.addEventListener('click', e => {
+                if( this.elements.eventAddBtn)
+                {this.elements.eventAddBtn.addEventListener('click', e => {
+           
             let fieldValue = `${Number(month) + 1}/${day}/${year}`;
-            var valoare= document.getElementById("optiunile");
-            if(valoare.value=="rosu")document.querySelectorAll(".selected-day:after")[0].style.background="#d3152f";
-            if(valoare.value=="galben")element.style.background="yellow";
-            if(valoare.value=="verde")document.querySelectorAll(".selected-day:after")[0].style.background="green";
-            
             if (!fieldValue) return false;
             let dateFormatted = this.getFormattedDate(new Date(this.date));
+            console.log(this.elements.eventField.value);
             if (!this.eventList[dateFormatted]) this.eventList[dateFormatted] = [];
-            this.eventList[dateFormatted].push(fieldValue);
+            this.eventList[dateFormatted].push(dateFormatted);
+            this.eventList[dateFormatted].push(this.elements.eventField.value);
             localStorage.setItem(localStorageName, JSON.stringify(this.eventList));
             
+                var valoare= document.getElementById("optiunile");
+                var ceva=document.querySelectorAll(".calendar-days-list .calendar-days>li");
+                for(var i=0;i<ceva.length;i++)
+                    {
+                        if(ceva[i].getAttribute('data-day')==day && ceva[i].getAttribute('data-month')==month && ceva[i].getAttribute('data-year')==year )
+                            {
+                                 if(valoare.value=="Foarte ridicata")ceva[i].style.backgroundColor="red";
+                                if(valoare.value=="Ridicata")ceva[i].style.backgroundColor="green";
+                                if(valoare.value=="Medie")ceva[i].style.backgroundColor="yellow";
+                                break;
+                            }
+                    }
+                /*var nou=ceva.querySelectorAll(`[data-month='${Number(month) + 1}']`);
+                var nou2=nou.querySelectorAll(`[data-year='${year}']`);
+                console.log(nou2);*/
+           
+             afiseazaCampInitial();       
         })}
+                
+            }
+         
         });
 
 
@@ -306,6 +419,9 @@ class CALENDAR {
     }
  getFirstElementInsideIdByClassName(className) {
         return document.getElementById(this.options.id).getElementsByClassName(className)[0];
+    }
+    getFirstElementInsideId(className) {
+        return document.getElementById(className);
     }
 
 }

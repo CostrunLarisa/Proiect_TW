@@ -114,6 +114,8 @@ app.post('/login', function(req, res) {
 	})
 })
 
+
+
 app.post('/add-event-day', function(req, res) {
     
   var formular= new formidable.IncomingForm()
@@ -142,11 +144,12 @@ app.post('/add-event-day', function(req, res) {
             var jsonNou=JSON.stringify(obUseri);
             fs.writeFileSync("resurse/json/evenimente.json",jsonNou );
               res.redirect("/book");
+        
             }
             else{
                 obUseri.lastId--;
             console.log("Doar adminii pot adauga evenimente.");
-            res.redirect("/book");
+            res.redirect("/");
             }
            }
         else{

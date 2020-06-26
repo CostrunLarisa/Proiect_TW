@@ -76,7 +76,8 @@ margin-top:-122px;}
   #calendar .current-day, #calendar .current-day-events {
     padding-top: 40px; }
   #calendar .current-day-events {
-    height: 40%; }
+        height: 35%;
+    margin-top: 37px; }
   #calendar .current-day-events ul {
     padding-left: 30px;
     list-style: none; }
@@ -88,14 +89,15 @@ margin-top:-122px;}
   #calendar .add-event-day {
     border-bottom: 1px solid white; 
     margin-top: -102px;
-    left: -55%;
+    left: -109%;
     height:161px;
     float: left;
-    padding:0px;}
+    padding:0px;
+width:76%;}
     #calendar .add-event-day .add-event-day-field {
       border: none;
       background: transparent;
-      height: 15px;
+      height: 13px;
       width: 100%;
       font-size: 16px;
       padding-right: 30px; }
@@ -104,11 +106,12 @@ margin-top:-122px;}
     #calendar .add-event-day .add-event-day-field::placeholder {
       color: #ccc; }
     #calendar .add-event-day .add-event-day-field-btn {
-      left: inherit;
+      left: 36px;
       line-height: 34px; 
         float: right;
-    margin-top: -73px;
+    margin-top: -204px;
     background:transparent;
+    border: none;
     }
   #calendar .right-side {
     width: 65%;
@@ -222,5 +225,28 @@ margin-top:-30px;}
     height:50px;
 }
 #afisEve{
-    color:black;
+    color:white;
+}
+#calendar .calendar-left-side-day-of-week{
+    margin-top:-123px;
+}
+#calendar .add-event-day #data{
+    visibility: hidden;
+    height:5px;
+}
+#calendar .add-event-day #optiunile{
+    height:50px;
+    margin-top:-20px;
+}
+ #calendar .calendar-days .galben.:after{
+    background-color:yellow;
+}
+#calendar .calendar-days .rosu:after{
+    background-color:#d3152f;
+}
+#calendar .calendar-days .verde:after{
+    background-color: :green;
+}
+#calendar .selected-day{
+    border-radius:90px;
 }

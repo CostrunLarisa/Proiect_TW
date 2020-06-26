@@ -41,18 +41,20 @@
             <div class="current-day-events-list" id="afisEve">
             </div>
         </div>
+    <% if(locals.username=="admin") { %>
     <form method="post" action="/add-event-day" class="add-event-day" >
+          <select name="prioritate" class="add-event-day-field optiuniCl" id="optiunile" placeholder="Prioritate" required>
+            <option value="Foarte ridicata">Foarte ridicata</option>
+            <option value="Ridicata">Ridicata</option>
+            <option value="Medie">Medie</option>
+        </select>
         <input type="text" name="nume" class="add-event-day-field" placeholder="Adauga eveniment." required>
         <input type="text" name="descriere" class="add-event-day-field" placeholder="Descriere" required>
         <input type="text" name="ora" class="add-event-day-field" placeholder="Ora" required>
         <select name="data" class="add-event-day-field" id="data"></select>
-        <select name="prioritate" class="add-event-day-field " id="optiunile" placeholder="Prioritate" required>
-            <option value="rosu">Foarte ridicata</option>
-            <option value="verde">Ridicata</option>
-            <option value="galben">Medie</option>
-        </select>
         <button type="submit" class=" fa fa-plus-circle cursor-pointer add-event-day-field-btn"></button>
-        </form>
+    </form>
+     <% }  %>
     </div>
     <div class="right-side">
         <div class="text-right calendar-change-year">
