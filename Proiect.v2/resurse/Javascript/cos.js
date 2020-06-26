@@ -16,4 +16,16 @@ function signup(){
     y.style.top="-230px"; 
     y.style.height="77%";
 }
-
+function sorteazaNume(){
+}
+function sorteazaPret(){
+}
+function ascundeInfo(){
+    
+}
+function nStoc(){
+    
+}
+function valoareProd(){
+    
+}

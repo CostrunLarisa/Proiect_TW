@@ -29,9 +29,6 @@ function afiseazaAjax(obiect){
 	ajaxRequest.onreadystatechange = function() {
 			//daca am primit raspunsul (readyState==4) cu succes (codul status este 200)
 			if (this.readyState == 4 && this.status == 200) {
-                console.log("ceva");
-                	
-					//in proprietatea responseText am contintul fiserului JSON
 					var obJson = JSON.parse(this.responseText);
 					afiseajaJsonTemplate(obJson);
 			}
@@ -49,7 +46,7 @@ function afiseazaAjax(obiect){
 			var textTemplate ="";
 			//parcurg vetorul de studenti din obJson
 			for(let i=0;i<obJson.eve.length;i++){
-                console.log(obiect);
+ 
                 if(obiect==obJson.eve[i].data)
                 {
                 textTemplate+="Nume :"+ obJson.eve[i].nume+" Despre : "+obJson.eve[i].descriere+"  Ora : "+ obJson.eve[i].ora + "Prioritate:"+obJson.eve[i].prioritate;
@@ -60,6 +57,8 @@ function afiseazaAjax(obiect){
 			
 	}
 }
+
+
 class CALENDAR {
     constructor(options) {
         this.options = options;
@@ -94,7 +93,7 @@ class CALENDAR {
     afiseazaTot(){
        
         var ceva = JSON.parse(localStorage.getItem(localStorageName));
-       Object.values(ceva).map(item => {
+       if(ceva)Object.values(ceva).map(item => {
            if(item[0].slice(1,2)=="/")
                {
                    var day=item[0].slice(0,1);
@@ -132,7 +131,7 @@ class CALENDAR {
                             {
                                 c[i].style.backgroundColor="green";
                                 c[i].style.borderRadius="50px";
-            
+                                
                                 break;
                             }
                     }
@@ -145,6 +144,7 @@ class CALENDAR {
                             {
                                 c[i].style.backgroundColor="red"
                                 c[i].style.borderRadius="50px";
+                                 
                                 break;
                             }
                     }
@@ -157,12 +157,65 @@ class CALENDAR {
                             {
                                 c[i].style.backgroundColor="yellow";
                                 c[i].style.borderRadius="50px";
+                               
                                 break;
                             }
                     }
                }
            
        })
+          var ajaxRequest = new XMLHttpRequest();
+            ajaxRequest.onreadystatechange = function() {
+                    //daca am primit raspunsul (readyState==4) cu succes (codul status este 200)
+                    if (this.readyState == 4 && this.status == 200) {
+
+                            //in proprietatea responseText am contintul fiserului JSON
+                            var obJson = JSON.parse(this.responseText);
+                            afiseajaJsonTemplate(obJson);
+                    }
+            };
+            //deschid o conexiune cu o cerere de tip get catre server
+            ajaxRequest.open("GET", "/json/evenimente.json", true);
+            //trimit catre server cererea
+            ajaxRequest.send();
+
+            function afiseajaJsonTemplate(obJson) { 
+                    var ob=document.querySelectorAll(".calendar-days-list .calendar-days>li");
+                    for(var object of ob)
+                        {
+                         
+                        var day=object.getAttribute('data-day');
+                        var month=object.getAttribute('data-month');
+                        var year=object.getAttribute('data-year');
+                        
+                        var cls= `${day}/${Number(month) + 1}/${year}`;
+                        var textTemplate ="";
+                    //parcurg vetorul de studenti din obJson
+                    for(let i=0;i<obJson.eve.length;i++){
+
+                        if(cls==obJson.eve[i].data)
+                        {
+                            var p1=document.createElement("span");
+                           
+                            p1.innerHTML=obJson.eve[i].nume+"<br>";
+                            p1.innerHTML+=obJson.eve[i].ora ;
+                            p1.style.width="10px";
+                            p1.style.marginLeft="-50px";
+                            
+                            var nou=document.createElement("div");
+                            nou.appendChild(p1);
+                        
+                            nou.className="ascuns";
+                            nou.style.position="absolute";
+                            nou.style.lineHeight="15px";
+                
+                         object.appendChild(nou);
+                        
+                        console.log(textTemplate);
+                      }
+                    }
+                        }
+            }
     }
     // draw Methods
     drawAll() {
@@ -235,7 +288,7 @@ class CALENDAR {
 
         let daysTemplate = "";
         days.forEach(day => {
-            daysTemplate += `<li class="${day.currentMonth ? '' : 'another-month'}${day.today ? ' active-day ' : ''}${day.selected ? 'selected-day' : ''}${day.hasEvent ? ' event-day' : ''}" data-day="${day.dayNumber}" data-month="${day.month}" data-year="${day.year}"></li>`
+            daysTemplate += `<li class="${day.currentMonth ? '' : 'another-month'}${day.today ? ' active-day ' : ''}${day.selected ? 'selected-day' : ''}${day.hasEvent ? ' event-day' : ''}" data-day="${day.dayNumber}" data-month="${day.month}" data-year="${day.year}" id="tooltip"></li>`
         });
 
         this.elements.days.innerHTML = daysTemplate;
@@ -320,7 +373,6 @@ class CALENDAR {
             let fieldValue = `${Number(month) + 1}/${day}/${year}`;
             if (!fieldValue) return false;
             let dateFormatted = this.getFormattedDate(new Date(this.date));
-            console.log(this.elements.eventField.value);
             if (!this.eventList[dateFormatted]) this.eventList[dateFormatted] = [];
             this.eventList[dateFormatted].push(dateFormatted);
             this.eventList[dateFormatted].push(this.elements.eventField.value);
@@ -348,6 +400,44 @@ class CALENDAR {
             }
          
         });
+           /*this.elements.days.addEventListener('onMouseOver', o => {
+      
+            var ajaxRequest = new XMLHttpRequest();
+            ajaxRequest.onreadystatechange = function() {
+                    //daca am primit raspunsul (readyState==4) cu succes (codul status este 200)
+                    if (this.readyState == 4 && this.status == 200) {
+
+                            //in proprietatea responseText am contintul fiserului JSON
+                            var obJson = JSON.parse(this.responseText);
+                            afiseajaJsonTemplate(obJson);
+                    }
+            };
+            //deschid o conexiune cu o cerere de tip get catre server
+            ajaxRequest.open("GET", "/json/evenimente.json", true);
+            //trimit catre server cererea
+            ajaxRequest.send();
+
+            function afiseajaJsonTemplate(obJson) { 
+                    var ob=document.querySelectorAll(".calendar-days-list .calendar-days>li");
+                    for(var object of ob)
+                        {
+                         
+                        var cls=""+object.getAttribute('data-day')+"/"+object.getAttribute('data-month')+"/"+object.getAttribute('data-year');
+                        var textTemplate ="";
+                    //parcurg vetorul de studenti din obJson
+                    for(let i=0;i<obJson.eve.length;i++){
+                        console.log(obiect);
+                        if(obiect==obJson.eve[i].data)
+                        {
+                        textTemplate+="Nume :"+ obJson.eve[i].nume+ "Ora : "+ obJson.eve[i].ora ;
+                         object.innerHTML=textTemplate;
+                        
+                      }
+                    }
+                        }
+            }
+ 
+           });*/
 
 
       /*this.elements.eventAddBtn.addEventListener('click', e => {
@@ -425,8 +515,6 @@ class CALENDAR {
     }
 
 }
-
-
 
 (function () {
     new CALENDAR({

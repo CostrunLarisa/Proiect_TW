@@ -6,11 +6,11 @@
 		<link rel="stylesheet" type="text/css" href=" CSS/footer.css">
 		<link rel="stylesheet" type="text/css" href=" CSS/books.css">
         <link rel="stylesheet" type="text/css" href=" CSS/calendar.css">
-		<script src=" Javascript/book.js"></script>
 		<script src=" Javascript/order.js"></script>
 		<script src=" Javascript/scriptAjax.js"></script>
-
-        <script src=" Javascript/scriptAjax.js"></script>
+		<script src=" Javascript/cerereAjax.js"></script>
+        <script src=" Javascript/book.js"></script>
+        
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -29,6 +29,10 @@
 	</head>
 	<body>
 		 <%-include("../fragmente/header.ejs")%>
+  <div id="afiseazaUtilizatori"></div>
+ <% if(locals.rol=="admin") { %>
+      <script src=" Javascript/scriptBook.js"></script>
+     <% } %>
 <div class="wrapper">
 <div class="calendar disable-selection" id="calendar">
     <div class="left-side">
@@ -41,7 +45,7 @@
             <div class="current-day-events-list" id="afisEve">
             </div>
         </div>
-    <% if(locals.username=="admin") { %>
+    <% if(locals.rol=="admin") { %>
     <form method="post" action="/add-event-day" class="add-event-day" >
           <select name="prioritate" class="add-event-day-field optiuniCl" id="optiunile" placeholder="Prioritate" required>
             <option value="Foarte ridicata">Foarte ridicata</option>
@@ -54,7 +58,11 @@
         <select name="data" class="add-event-day-field" id="data"></select>
         <button type="submit" class=" fa fa-plus-circle cursor-pointer add-event-day-field-btn"></button>
     </form>
-     <% }  %>
+
+     <% }
+            else{
+                %> <p>Ne pare rau,nu poti accesa aceasta sectiune.</p> <%
+            }%>
     </div>
     <div class="right-side">
         <div class="text-right calendar-change-year">
@@ -78,36 +86,36 @@
         </div>
         <div class="calendar-days-list">
             <ul class="calendar-days" >
-            <li data-day="01"></li>
-            <li data-day="02"></li>
-            <li data-day="03"></li>
-            <li data-day="04"></li>
-            <li data-day="05"></li>
-            <li data-day="06"></li>
-            <li data-day="07"></li>
-            <li data-day="08"></li>
-            <li data-day="09"></li>
-            <li data-day="10"></li>
-            <li data-day="11"></li>
-            <li data-day="12"></li>
-            <li data-day="13"></li>
-            <li data-day="14"></li>
-            <li data-day="15"></li>
-            <li data-day="16"></li>
-            <li data-day="17"></li>
-            <li data-day="18"></li>
-            <li data-day="19"></li>
-            <li data-day="20"></li>
-            <li data-day="21"></li>
-            <li data-day="22"></li>
-            <li data-day="23"></li>
-            <li data-day="24"></li>
-            <li data-day="25"></li>
-            <li data-day="26"></li>
-            <li data-day="27"></li>
-            <li data-day="28"></li>
-            <li data-day="29"></li>
-            <li data-day="30"></li>
+            <li data-day="01" onMouseOver="hidden(this)" id="tooltip">Blaaaa</li>
+            <li data-day="02" onMouseOve="hidden(this)" id="tooltip"></li>
+            <li data-day="03"  onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="04" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="05" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="06" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="07" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="08" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="09" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="10" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="11" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="12" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="13" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="14" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="15" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="16" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="17" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="18" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="19" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="20" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="21" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="22" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="23" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="24" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="25" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="26" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="27" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="28" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="29" onMouseOver="hidden(this)" id="tooltip"></li>
+            <li data-day="30" onMouseOver="hidden(this)" id="tooltip"></li>
             </ul>
         </div>
 </div>

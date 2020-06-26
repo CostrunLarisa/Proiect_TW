@@ -17,9 +17,6 @@ window.onload=function(){
 	ajaxRequest.onreadystatechange = function() {
 			//daca am primit raspunsul (readyState==4) cu succes (codul status este 200)
 			if (this.readyState == 4 && this.status == 200) {
-                console.log("ceva");
-                	
-					//in proprietatea responseText am contintul fiserului JSON
 					var obJson = JSON.parse(this.responseText);
 					afiseajaJsonTemplate(obJson);
 			}
@@ -37,7 +34,6 @@ window.onload=function(){
 			var textTemplate ="";
 			//parcurg vetorul de studenti din obJson
 			for(let i=0;i<obJson.eve.length;i++){
-                console.log(obiect);
                 if(obiect==obJson.eve[i].data)
                 {textTemplate+=(ejs.render("<div class='templ_student'>\
 			     <p>Nume : <%= eve.id%> </p>\

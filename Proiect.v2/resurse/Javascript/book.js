@@ -1,3 +1,8 @@
+/** vim: et:ts=4:sw=4:sts=4
+ * @license RequireJS 2.3.5 Copyright jQuery Foundation and other contributors.
+ * Released under MIT license, https://github.com/requirejs/requirejs/blob/master/LICENSE
+ */
+
 
 function genereaza(){
 	var d=new Date();
@@ -67,5 +72,24 @@ function numara(caractere)
 
 	}
 	
+function blocheazaUtiliz(idUtiliz){
+      var http = new XMLHttpRequest();
+		var url = '/blocheaza';
+		var params = `id=${idUtiliz}`;
+		http.open('POST', url, true);
 
+		http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    http.send(params);
+    alert("Utilizator blocat!");
+}
+function stergeUtiliz(idUtiliz){
+      var http = new XMLHttpRequest();
+		var url = '/stergeUtiliz';
+		var params = `id=${idUtiliz}`;
+		http.open('POST', url, true);
+
+		http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    http.send(params);
+    alert("Utilizator sters!");
+}
 	

@@ -44,7 +44,8 @@ app.post('/inreg', function(req, res) {
         parola: parolaCriptata,
         dataInreg: new Date(),
         rol: "user",
-        email:fields.email
+        email:fields.email,
+        blocat: 0
 			}
 		obUseri.useri.push(userNou);
     obUseri.lastId++;
@@ -101,16 +102,42 @@ app.post('/login', function(req, res) {
     });
 		//find returneaza null daca nu gaseste elementul cu conditia data
 		if(utiliz){
-             console.log(fields.logat);
-			//setez datele de sesiune
+    
 			req.session.utilizator=utiliz;
-			console.log("Exista utilizatorul")
 			//render primeste pe al doilea parametru date (organizate sub forma unui obiect) care pot fi transmise catre ejs (template) 
-			res.render("html/index", {username: utiliz.username})
+			res.render("html/index", {username: utiliz.username,rol: utiliz.rol,blocat:utiliz.blocat})
 		}
 		
 		
 		//res.redirect("/")
+	})
+})
+app.post('/blocheaza', function(req, res) {
+
+  var formular= new formidable.IncomingForm()
+	formular.parse(req, function(err, fields, files){
+		fisierUseri=fs.readFileSync("resurse/json/useri.json");
+		obUseri= JSON.parse(fisierUseri);
+  	   var utiliz= obUseri.useri.find(function(u) {
+            return u.id == fields.id;
+    });
+        utiliz.blocat=1;
+        console.log(fields.id);
+		var jsonNou=JSON.stringify(obUseri);
+		fs.writeFileSync("resurse/json/useri.json",jsonNou );
+	})
+})
+app.post('/stergeUtiliz', function(req, res) {
+  var formular= new formidable.IncomingForm()
+	formular.parse(req, function(err, fields, files){
+		fisierUseri=fs.readFileSync("resurse/json/useri.json");
+		obUseri= JSON.parse(fisierUseri);
+        for(var i=0;i<obUseri.useri.length;i++)
+        {   if(obUseri.useri[i])if(obUseri.useri[i].id==fields.id){delete obUseri.useri[i];console.log("succes");}
+            
+        }
+		var jsonNou=JSON.stringify(obUseri);
+		fs.writeFileSync("resurse/json/useri.json",jsonNou );
 	})
 })
 
@@ -176,7 +203,9 @@ app.get("/logout", function(req, res) {
 app.get('/', function(req, res) {
 	/*afiseaza(render) pagina folosind ejs (deoarece este setat ca view engine) */
 		var numeUtiliz= req.session? (req.session.utilizator? req.session.utilizator.username : null) : null;
-    res.render('html/index', {username: numeUtiliz });
+		var rolul= req.session? (req.session.utilizator? req.session.utilizator.rol: null) : null;
+		var blocatul= req.session? (req.session.utilizator? req.session.utilizator.blocat: null) : null;
+    res.render('html/index', {username: numeUtiliz,rol: rolul,blocat:blocatul });
 });
 /*
 app.get('/pagina', function(req, res) {
@@ -192,13 +221,14 @@ app.get("/*", function(req,res){
 	console.log(req.url);
 
 	var numeUtiliz= req.session? (req.session.utilizator? req.session.utilizator.username : null) : null;
+    		var blocatul= req.session? (req.session.utilizator? req.session.utilizator.blocat: null) : null;
 
-
-	res.render('html'+req.url, {username: numeUtiliz}, function(err,textRandare){
+    var rolul= req.session? (req.session.utilizator? req.session.utilizator.rol: null) : null;
+	res.render('html'+req.url, {username: numeUtiliz,rol: rolul,blocat:blocatul}, function(err,textRandare){
 		//textRandare este rezultatul compilarii templateului ejs
 		if(err){
 			if(err.message.includes("Failed to lookup view"))
-				return res.status(404).render("html/404",  {username: numeUtiliz});
+				return res.status(404).render("html/404",  {username: numeUtiliz,rol: rolul,blocat:blocatul});
 			else
 				throw err;
 		}

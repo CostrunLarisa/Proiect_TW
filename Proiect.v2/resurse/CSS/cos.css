@@ -244,6 +244,10 @@ margin-top:-57px;
 #login{
     left:50px;
 }
+#afisTemplate>.templ_student{
+    border-bottom:3px solid black;
+    box-sizing:border-box;
+}
 #register{
     left:450px;
 }
@@ -288,6 +292,7 @@ margin-top:-57px;
     }
     .*/
   }
+
 @media screen and (max-width:1300px){
     .formular{
         width:100%;
